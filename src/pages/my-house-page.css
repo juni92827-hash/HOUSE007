@@ -1,0 +1,112 @@
+.h007-my-house {
+  padding: 56px 0 140px;
+}
+
+.h007-my-house--empty {
+  padding: 200px 40px;
+  text-align: center;
+}
+
+.h007-my-house__layout {
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 64px;
+}
+
+.h007-my-house__welcome {
+  font-family: var(--h007-font-display);
+  font-size: 20px;
+  color: var(--h007-cream);
+  margin-bottom: 32px;
+}
+
+.h007-my-house__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.h007-my-house__nav-item {
+  text-align: left;
+  color: var(--h007-cream-dim);
+}
+
+.h007-my-house__nav-item--active {
+  color: var(--h007-cream);
+}
+
+.h007-my-house__orders {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.h007-my-house__order {
+  background: var(--h007-bg-raised);
+  padding: 24px;
+}
+
+.h007-my-house__order-header {
+  display: flex;
+  gap: 24px;
+  font-family: var(--h007-font-body);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: var(--h007-cream-faint);
+  margin-bottom: 16px;
+}
+
+.h007-my-house__order-footer {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--h007-font-body);
+  color: var(--h007-cream);
+}
+
+.h007-my-house__tracking {
+  margin-top: 24px;
+}
+
+.h007-my-house__status-flow {
+  margin-top: 24px;
+  display: flex;
+  gap: 16px;
+}
+
+.h007-my-house__status-step {
+  padding: 12px 18px;
+  background: var(--h007-bg-raised);
+  font-family: var(--h007-font-body);
+  font-size: 13px;
+  color: var(--h007-cream-faint);
+}
+
+.h007-my-house__status-step--reached {
+  background: var(--h007-cream);
+  color: var(--h007-bg);
+}
+
+.h007-my-house__wishlist,
+.h007-my-house__addresses {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.h007-my-house__wishlist-item,
+.h007-my-house__address {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--h007-line);
+  font-family: var(--h007-font-body);
+  font-size: 14px;
+  color: var(--h007-cream);
+}

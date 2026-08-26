@@ -1,0 +1,26 @@
+.h007-auth-toast {
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 600;
+  background: var(--h007-bg-raised);
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+}
+
+.h007-auth-toast__title {
+  font-family: var(--h007-font-display);
+  font-size: 18px;
+  color: var(--h007-cream);
+}
+
+.h007-auth-toast__subtitle {
+  font-family: var(--h007-font-body);
+  font-size: 13px;
+  color: var(--h007-cream-dim);
+}

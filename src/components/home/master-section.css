@@ -1,0 +1,22 @@
+.h007-master {
+  padding: 120px 0;
+}
+
+.h007-master__inner {
+  padding: 0 40px;
+}
+
+.h007-master__copy {
+  max-width: 640px;
+  margin-bottom: 56px;
+}
+
+.h007-master__gallery {
+  display: flex;
+  gap: 24px;
+}
+
+.h007-master__frame {
+  width: calc((100% - 48px) / 3);
+  aspect-ratio: 4 / 5;
+}

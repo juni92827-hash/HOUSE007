@@ -1,0 +1,24 @@
+:root {
+  /* colors — derived directly from the supplied logo asset (cream on black) */
+  --h007-bg: #0b0b0a;
+  --h007-bg-raised: #121210;
+  --h007-line: #2a2924;
+  --h007-cream: #ede6d6;
+  --h007-cream-dim: #a39c8c;
+  --h007-cream-faint: #6b6558;
+  --h007-error: #c96a4e;
+  --h007-success: #8a9a7c;
+
+  /* typography */
+  --h007-font-display: 'Playfair Display', 'Times New Roman', serif;
+  --h007-font-body: 'EB Garamond', 'Times New Roman', serif;
+
+  /* layout */
+  --h007-content-max: 1760px;
+  --h007-header-h: 80px;
+  --h007-header-h-scrolled: 64px;
+  --h007-gap: 24px;
+
+  /* motion */
+  --h007-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}

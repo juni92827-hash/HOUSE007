@@ -1,0 +1,112 @@
+.h007-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.h007-field__label {
+  font-family: var(--h007-font-body);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: var(--h007-cream-faint);
+}
+
+.h007-field__input {
+  border-bottom: 1px solid var(--h007-line);
+  padding: 10px 0;
+  font-family: var(--h007-font-body);
+  font-size: 15px;
+  color: var(--h007-cream);
+  background: transparent;
+}
+
+.h007-field__input:focus {
+  outline: none;
+  border-bottom-color: var(--h007-cream);
+}
+
+.h007-field-row {
+  display: flex;
+  gap: 16px;
+}
+
+.h007-field-row .h007-field {
+  flex: 1;
+}
+
+.h007-checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  font-family: var(--h007-font-body);
+  font-size: 13px;
+  color: var(--h007-cream-dim);
+}
+
+.h007-primary-button {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid var(--h007-cream);
+  color: var(--h007-cream);
+  font-family: var(--h007-font-body);
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  margin-top: 8px;
+}
+
+.h007-primary-button:hover:not(:disabled) {
+  background: var(--h007-cream);
+  color: var(--h007-bg);
+}
+
+.h007-primary-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.h007-text-link-button {
+  font-family: var(--h007-font-body);
+  font-size: 13px;
+  color: var(--h007-cream-dim);
+  letter-spacing: 0.06em;
+}
+
+.h007-text-link-button:hover {
+  color: var(--h007-cream);
+}
+
+.h007-form-error {
+  font-family: var(--h007-font-body);
+  font-size: 13px;
+  color: var(--h007-error);
+  margin-bottom: 16px;
+}
+
+.h007-modal-title {
+  font-family: var(--h007-font-display);
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.h007-modal-subtitle {
+  font-family: var(--h007-font-body);
+  font-size: 14px;
+  color: var(--h007-cream-dim);
+  margin-bottom: 32px;
+}
+
+.h007-modal-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  font-family: var(--h007-font-body);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: var(--h007-cream-faint);
+}
+
+.h007-modal-close:hover {
+  color: var(--h007-cream);
+}

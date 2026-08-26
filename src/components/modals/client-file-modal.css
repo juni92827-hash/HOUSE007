@@ -1,0 +1,110 @@
+.h007-client-file__progress {
+  font-family: var(--h007-font-body);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: var(--h007-cream-faint);
+  margin-bottom: 12px;
+}
+
+.h007-client-file__eyebrow {
+  font-family: var(--h007-font-body);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  color: var(--h007-cream-faint);
+  margin-bottom: 12px;
+}
+
+.h007-client-file__options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.h007-client-file__option {
+  padding: 18px 20px;
+  background: var(--h007-bg-raised);
+  color: var(--h007-cream-dim);
+  font-family: var(--h007-font-body);
+  font-size: 15px;
+  letter-spacing: 0.06em;
+  text-align: left;
+  transition: background 200ms ease, color 200ms ease;
+}
+
+.h007-client-file__option:hover {
+  color: var(--h007-cream);
+}
+
+.h007-client-file__option--selected {
+  background: var(--h007-cream);
+  color: var(--h007-bg);
+}
+
+.h007-client-file__nav {
+  margin-top: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.h007-client-file__nav .h007-primary-button {
+  width: auto;
+  flex: 1;
+}
+
+.h007-client-file__analyzing {
+  text-align: center;
+  padding: 24px 0;
+}
+
+.h007-client-file__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0 32px;
+}
+
+.h007-client-file__tag {
+  padding: 6px 14px;
+  background: var(--h007-bg-raised);
+  font-family: var(--h007-font-body);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--h007-cream-dim);
+}
+
+.h007-client-file__recommendation {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 24px;
+  background: var(--h007-bg-raised);
+  margin-bottom: 32px;
+}
+
+.h007-client-file__recommendation-label {
+  font-family: var(--h007-font-body);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--h007-cream-faint);
+}
+
+.h007-client-file__recommendation-name {
+  font-family: var(--h007-font-display);
+  font-size: 22px;
+  color: var(--h007-cream);
+}
+
+.h007-client-file__recommendation-price {
+  font-family: var(--h007-font-body);
+  font-size: 15px;
+  color: var(--h007-cream-dim);
+}
+
+.h007-client-file__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

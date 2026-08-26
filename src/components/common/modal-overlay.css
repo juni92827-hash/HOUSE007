@@ -1,0 +1,25 @@
+.h007-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  background: rgba(11, 11, 10, 0.86);
+  display: flex;
+}
+
+.h007-modal-overlay__panel--center {
+  margin: auto;
+  background: var(--h007-bg);
+  padding: 56px;
+  width: 480px;
+  max-height: 88vh;
+  overflow-y: auto;
+}
+
+.h007-modal-overlay__panel--right {
+  margin-left: auto;
+  height: 100%;
+  background: var(--h007-bg);
+  width: 460px;
+  padding: 48px;
+  overflow-y: auto;
+}

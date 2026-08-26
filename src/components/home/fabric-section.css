@@ -1,0 +1,99 @@
+.h007-fabric {
+  padding: 120px 0 140px;
+}
+
+.h007-fabric__inner {
+  padding: 0 40px;
+}
+
+.h007-fabric__categories {
+  margin-top: 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.h007-fabric__category-label {
+  display: block;
+  font-family: var(--h007-font-body);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  color: var(--h007-cream-faint);
+  margin-bottom: 14px;
+}
+
+.h007-fabric__swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.h007-fabric__swatch {
+  padding: 12px 22px;
+  background: var(--h007-bg-raised);
+  color: var(--h007-cream-dim);
+  font-family: var(--h007-font-body);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  transition: color 200ms ease, background 200ms ease;
+}
+
+.h007-fabric__swatch:hover {
+  color: var(--h007-cream);
+}
+
+.h007-fabric__swatch--selected {
+  background: var(--h007-cream);
+  color: var(--h007-bg);
+}
+
+.h007-fabric__preview {
+  margin-top: 40px;
+  min-height: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.h007-fabric__preview-title {
+  font-family: var(--h007-font-display);
+  font-size: 18px;
+  color: var(--h007-cream);
+}
+
+.h007-fabric__preview-info {
+  font-family: var(--h007-font-body);
+  font-size: 14px;
+  color: var(--h007-cream-dim);
+}
+
+.h007-fabric__matches {
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid var(--h007-line);
+}
+
+.h007-fabric__matches-count {
+  display: block;
+  font-family: var(--h007-font-body);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: var(--h007-cream-faint);
+  margin-bottom: 14px;
+}
+
+.h007-fabric__matches-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.h007-fabric__matches-item {
+  font-family: var(--h007-font-body);
+  font-size: 15px;
+  color: var(--h007-cream);
+}
+
+.h007-fabric__matches-item:hover {
+  color: var(--h007-cream-dim);
+}

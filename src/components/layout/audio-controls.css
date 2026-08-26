@@ -1,0 +1,22 @@
+.h007-audio-controls {
+  position: fixed;
+  right: 40px;
+  bottom: 32px;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.h007-audio-controls__toggle {
+  color: var(--h007-cream-dim);
+}
+
+.h007-audio-controls__toggle:hover {
+  color: var(--h007-cream);
+}
+
+.h007-audio-controls__volume {
+  width: 90px;
+  accent-color: var(--h007-cream);
+}

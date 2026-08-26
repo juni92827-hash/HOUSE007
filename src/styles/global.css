@@ -1,0 +1,86 @@
+@import './tokens.css';
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-width: 1440px;
+  background: var(--h007-bg);
+  color: var(--h007-cream);
+}
+
+body {
+  font-family: var(--h007-font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.h007-content {
+  width: 100%;
+  max-width: var(--h007-content-max);
+  margin: 0 auto;
+}
+
+.h007-nav-text {
+  font-family: var(--h007-font-body);
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: color 200ms ease, letter-spacing 200ms ease;
+}
+
+.h007-section-title {
+  font-family: var(--h007-font-display);
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.h007-section-subcopy {
+  font-family: var(--h007-font-body);
+  font-size: 18px;
+  color: var(--h007-cream-dim);
+}

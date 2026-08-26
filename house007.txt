@@ -1,0 +1,1553 @@
+
+HOUSE 007
+MASTER IMPLEMENTATION PROMPT
+========================================
+
+IMPORTANT:
+Read this entire specification before implementing anything.
+This document is the single source of truth for the HOUSE 007 website.
+
+HOUSE 007 IS NOT A STATIC DESIGN MOCKUP.
+IT IS A FULLY INTERACTIVE DESKTOP E-COMMERCE EXPERIENCE.
+
+Do not start coding until the complete specification has been understood.
+
+HOUSE 007 — PROJECT MASTER PLAN
+========================================
+
+[PROJECT OVERVIEW]
+
+Brand Name:
+HOUSE 007
+
+Concept:
+Premium bespoke tailoring e-commerce website combining:
+British Luxury Tailoring × Secret House × AI Personalization
+
+Brand World:
+Customer = CLIENT
+Tailor = MASTER
+AI = HOUSE INTELLIGENCE
+
+Core Message:
+INTELLIGENCE FINDS YOUR STYLE.
+THE MASTER PERFECTS IT.
+
+Target:
+30–40대 남성
+- 사업가 / 대표 / 전문직 / 임원급
+- 거래처 미팅 및 중요한 공식 일정이 많음
+- 정장을 자주 착용
+- 좋은 옷을 입는 것이 상대방에 대한 예의라고 생각
+- 백화점 기성 브랜드보다 맞춤 정장을 선호
+- 브랜드 로고보다 핏, 원단, 품질을 중요하게 생각
+- 전문가의 추천을 신뢰
+- 온라인에서 먼저 탐색하고 구매 후보를 좁히는 경향
+
+[PERSONA 01]
+
+32세 / 사업가 / 대표
+
+Characteristics:
+- 거래처 및 사업 추진으로 정장을 자주 착용
+- 중요한 자리에서는 좋은 정장을 착용하려 함
+- 비싼 옷을 입는 것은 상대방에 대한 예의라고 생각
+- 백화점 브랜드보다 맞춤 정장을 선호
+- 자신의 체형과 이미지에 맞는 수트를 원함
+- 시간이 부족하여 온라인에서 먼저 확인하고 싶어함
+- 전문가 추천을 신뢰
+
+Needs:
+Professional / Refined / Confident
+
+Pain Points:
+- 기성복은 핏이 완벽하지 않음
+- 많은 상품 중 자신에게 맞는 제품을 찾기 어려움
+- 맞춤정장 상담 과정이 번거롭게 느껴질 수 있음
+
+[PERSONA 02]
+
+30–40대 전문직 / 임원급
+
+Characteristics:
+- 중요한 프레젠테이션과 공식적인 자리에서 정장 착용
+- 과하지 않으면서 고급스러운 스타일 선호
+- 브랜드보다 원단과 핏을 중요하게 생각
+- 자신의 취향은 있지만 전문가 조언도 원함
+- 온라인에서 스타일을 비교하고 구매 후보를 좁힘
+
+Needs:
+Minimal / Sophisticated / Personal
+
+Pain Points:
+- 온라인에서 실제 원단과 핏을 판단하기 어려움
+- 비슷해 보이는 수트의 차이를 알기 어려움
+- 자신의 이미지에 맞는 수트를 찾는 시간이 오래 걸림
+
+[PROJECT STRUCTURE]
+
+HOUSE 007 is a premium desktop-first bespoke tailoring e-commerce website.
+
+The project must include the following required pages and functions.
+
+REQUIRED PAGES
+
+1. MAIN PAGE
+- HOUSE 007 main shopping experience
+- Cinematic Hero
+- THE HOUSE COLLECTION
+- Infinite Product Carousel
+- AI STYLE / CLIENT FILE
+- THE MASTER
+- THE FABRIC
+- Sticky typography-based navigation
+- Search
+- Wishlist
+- Audio controls
+- Shopping and account functions
+
+2. PRODUCT DETAIL PAGES — MINIMUM 3
+- At least 3 fully functional Product Detail pages must be implemented.
+- Each Product Detail page must be connected to its corresponding product card.
+- Each Product Detail page must support actual shopping interactions.
+
+Product Detail must include:
+- Product image gallery
+- Product name
+- Price
+- Material
+- Pattern
+- Color
+- Fit
+- Size selection
+- Stock quantity / availability
+- Wishlist
+- Quantity selection
+- ADD TO BAG
+- BUY NOW
+- Related product connection where applicable
+
+3. LANDING PAGE
+- HOUSE 007 brand introduction
+- Secret Agent / British Gentleman atmosphere
+- Gun-barrel-inspired cinematic movement
+- The visual movement approaches the center
+- A suit is revealed at the center
+- A cinematic transition leads into the Main Website
+- Original cinematic audio experience
+
+REQUIRED E-COMMERCE FUNCTIONS
+
+CART / BAG
+- ADD TO BAG
+- Remove item
+- Quantity update
+- Automatic price calculation
+- Total amount calculation
+- Bag count update
+- Mini Bag
+- Checkout connection
+- Prevent quantity from exceeding available stock
+
+LOGIN
+- Login
+- Logout
+- Authentication state
+- Welcome message
+- Profile state
+
+SIGN UP
+- Account creation
+- First Name
+- Last Name
+- Email
+- Password
+- Confirm Password
+- Phone
+- Delivery address
+- Terms / Privacy agreement
+- Account creation state
+
+DELIVERY TRACKING
+- Order history
+- Order number
+- Ordered product
+- Order date
+- Order status
+- Delivery status
+- TRACK ORDER
+
+Example order status flow:
+Preparing
+→ Shipped
+→ In Transit
+→ Delivered
+
+TRACK ORDER must open a real order/delivery status view rather than being a decorative button.
+
+INVENTORY / STOCK
+- Display current stock availability on Product Detail
+- Display size-specific stock when applicable
+- Prevent selection of unavailable sizes
+- Prevent adding quantities greater than available stock
+- Show SOLD OUT when stock reaches zero
+- Disable ADD TO BAG when the selected product/size is unavailable
+- Update stock state after purchase or simulated order completion
+
+Example:
+SIZE
+46
+48
+50
+52
+
+48
+IN STOCK — 3 LEFT
+
+50
+SOLD OUT
+
+If stock is low, show a clear text status such as:
+ONLY 3 LEFT
+
+ACCOUNT / MY HOUSE
+
+Only display functions that are actually implemented.
+
+Possible functions:
+MY ORDERS
+ORDER TRACKING
+WISHLIST
+BAG
+ADDRESS BOOK
+PAYMENT METHODS
+CLIENT FILE
+STYLE PROFILE
+SETTINGS
+LOG OUT
+
+CORE DATA CONNECTION
+
+All shopping functions must use connected product, inventory, account, cart and order data.
+
+PRODUCT
+↓
+STOCK
+↓
+PRODUCT DETAIL
+↓
+ADD TO BAG
+↓
+CART / BAG
+↓
+ORDER
+↓
+DELIVERY STATUS
+↓
+MY ORDERS
+
+ACCOUNT
+↓
+LOGIN / SIGN UP
+↓
+MY HOUSE
+├─ MY ORDERS
+├─ DELIVERY TRACKING
+├─ WISHLIST
+├─ CLIENT FILE
+└─ ADDRESS BOOK
+
+Only implement pages, functions and navigation that belong to the actual HOUSE 007 experience.
+Every visible interactive element must have a real working behavior or a valid destination.
+
+[DESKTOP DESIGN]
+
+Platform:
+Desktop Web Only
+
+Mobile:
+반응형 모바일 디자인 제작하지 않음
+
+Base Resolution:
+1920 × 1080px
+
+Content Max Width:
+1760px
+
+Header:
+Initial Height 80px
+Scrolled Height 64px
+
+[LANGUAGE RULE]
+
+IMPORTANT:
+기획 설명은 한국어로 작성할 수 있다.
+
+하지만 실제 웹사이트에 표시되는 모든 UI TEXT는 ENGLISH ONLY.
+
+Claude는 지정된 영어 UI 문구를 임의로 한국어로 번역하지 않는다.
+
+기능명 / 이벤트명 / 변수명 / 상태명 / 컴포넌트명 / 데이터 키는 ENGLISH ONLY.
+
+Examples:
+Login
+SignUp
+Logout
+AddToCart
+RemoveFromCart
+UpdateQuantity
+OpenLoginModal
+OpenProfile
+StartClientFile
+GenerateMissionProfile
+OpenShopDropdown
+CloseShopDropdown
+FloatingStylingPreview
+
+[CLAUDE PROMPT STRUCTURE]
+
+[PROJECT DESCRIPTION]
+한국어 기획 설명
+
+[ENGLISH UI TEXT]
+실제 화면에 표시할 정확한 영어 문구
+
+[FUNCTION / INTERACTION]
+영어 기능명 + 한국어 동작 설명
+
+[STATE / DATA]
+영어 변수 / 상태 / 데이터 키
+
+[IMAGE GENERATION]
+이미지 생성 규칙
+
+[TYPOGRAPHY SYSTEM]
+
+Use only the fonts explicitly defined by the HOUSE 007 design system.
+
+Do NOT:
+- Substitute a font automatically.
+- Use browser defaults.
+- Use Inter, Arial, Helvetica, Roboto, system-ui or another common default unless explicitly specified.
+- Change font family per component without an explicit rule.
+- Invent font sizes, weights, line heights or letter spacing when they are not defined.
+
+Font family, font size, font weight, line height and letter spacing must be treated as controlled design-system values.
+
+[GLOBAL DESIGN RESTRICTIONS — STRICT]
+
+Claude must NOT invent, assume, or automatically add any visual styling that is not explicitly specified in this document.
+
+If a visual property is not defined, do NOT create a design decision on your own.
+
+STRICTLY PROHIBITED UNLESS EXPLICITLY SPECIFIED:
+
+- Box Shadow / Drop Shadow
+- Border Radius / Rounded Corners
+- Border / Outline
+- Divider Lines
+- Default component borders
+- Default browser styling
+- Framework / component-library default styling
+- Unspecified fonts or typefaces
+- Unspecified font weights
+- Unspecified gradients
+- Unspecified glow effects
+- Unspecified blur effects
+- Unspecified glass effects
+- Unspecified background decorations
+- Unspecified icons
+- Unspecified illustrations
+- Unspecified hover effects
+- Unspecified animations
+- Unspecified transitions
+- Unspecified scaling effects
+- Unspecified color changes
+- Unspecified decorative elements
+
+IMPORTANT:
+Do not add rounded cards simply because they are common in modern UI design.
+Do not add shadows to create depth unless a shadow value is explicitly defined.
+Do not add borders or outlines to visually separate elements unless explicitly defined.
+Do not automatically use a common web font or framework default font.
+Do not replace typography with icons.
+Do not add decorative icons to buttons or navigation.
+
+DEFAULT BEHAVIOR:
+
+If a property is not specified:
+1. Do not invent it.
+2. Do not apply a trendy or modern UI pattern automatically.
+3. Follow the established HOUSE 007 visual language.
+4. Keep the element visually neutral until a specific value is provided.
+
+IMPLEMENTATION RULE:
+
+Do not use default browser or framework/component-library styling when it conflicts with this specification.
+
+Every visual decision must come from one of:
+- Explicit project specification
+- Defined design system
+- Existing supplied asset
+- Explicit instruction given later by the project owner
+
+If there is a conflict between a framework default and this specification, this specification always takes priority.
+
+[DO NOT]
+금지사항
+
+[VISUAL / BRAND DIRECTION]
+
+Overall:
+Premium British Tailoring
+Modern Luxury
+Secret House
+Cinematic
+Sophisticated
+Editorial
+Minimal
+Photorealistic
+
+Mood:
+British Gentleman
+Luxury Tailoring
+Confidential Client House
+Modern 007-inspired atmosphere
+
+Do not make it look like a direct James Bond copy.
+007을 연상시키는 분위기만 차용하고 독자적인 HOUSE 007 브랜드로 재해석.
+
+[HEADER / NAVIGATION]
+
+Header:
+Sticky
+
+Top State:
+80px
+Transparent
+
+Scrolled State:
+64px
+Dark background
+Subtle border
+
+Navigation:
+HOUSE 007
+SHOP
+AI STYLE
+SEARCH
+LOGIN
+BAG
+
+IMPORTANT:
+Decorative icons are NOT used.
+Navigation and controls should be text-based.
+
+NO DECORATIVE ICONS.
+USE TYPOGRAPHY-BASED NAVIGATION AND CONTROLS.
+
+Examples:
+HOUSE 007     SHOP     AI STYLE     SEARCH     LOGIN     BAG
+
+After login:
+HOUSE 007     SHOP     AI STYLE     SEARCH     MR. KIM     BAG 02
+
+Hover:
+- Subtle text brightness change
+- Thin underline
+- Small letter-spacing change
+- Short fade transition
+
+Do not use excessive icons.
+
+[HEADER FUNCTIONS]
+
+HOUSE 007:
+Click → HOME
+
+SHOP:
+Hover → SHOP Dropdown
+Click → Product Collection
+
+AI STYLE:
+Click → CLIENT FILE
+
+SEARCH:
+Click → Search Overlay
+
+LOGIN:
+Click → Login Modal when logged out
+
+PROFILE:
+After login, user name can replace LOGIN
+Click → Profile Panel
+
+BAG:
+Click → Mini Bag / Bag Panel
+
+[SHOP DROPDOWN]
+
+SHOP Hover:
+OpenShopDropdown
+
+Mouse Leave:
+CloseShopDropdown
+
+Dropdown remains open while cursor is inside the dropdown.
+
+SHOP itself remains clickable.
+
+Hover = Browse categories
+Click = Open product collection
+
+Only show categories/products that actually exist.
+
+Example:
+
+SUITS
+Executive Navy Suit
+Charcoal Business Suit
+Black Formal Suit
+
+STYLE
+Business
+Formal
+Bespoke
+
+No fake or unconnected navigation.
+
+[LOGIN / SIGN UP]
+
+Login is a Modal.
+Do not navigate to a separate login page.
+
+[ENGLISH UI TEXT]
+
+WELCOME TO THE HOUSE
+
+EMAIL
+PASSWORD
+LOGIN
+FORGOT PASSWORD?
+JOIN THE HOUSE
+CONTINUE AS GUEST
+
+Guest users can browse and shop without forced registration.
+
+LOGIN FLOW:
+Login → Home remains accessible
+
+[JOIN THE HOUSE]
+
+ACCOUNT:
+First Name
+Last Name
+Email
+Password
+Confirm Password
+Phone
+
+DELIVERY:
+Postal Code
+Address
+Detail Address
+Address Name
+Delivery Request
+
+PERSONAL:
+Date of Birth
+Gender
+Use as optional fields when not required.
+
+AGREEMENT:
+Terms of Service
+Privacy Policy
+
+Optional:
+Marketing
+Email
+SMS
+Promotional Notifications
+
+CREATE ACCOUNT
+
+Signup should include normal e-commerce account functionality.
+
+Signup complete:
+
+WELCOME TO THE HOUSE, MR. KIM.
+Your journey begins here.
+
+Existing member login:
+
+WELCOME BACK, MR. KIM.
+Your House is ready.
+
+Logout confirmation:
+
+LEAVE THE HOUSE?
+
+STAY
+LOG OUT
+
+Logout complete:
+
+UNTIL NEXT TIME, MR. KIM.
+The House will be waiting.
+
+User name must be dynamically generated from account data.
+
+[HERO]
+
+HOME Hero should not repeat the Landing Page experience.
+Landing = entering the House
+Home Hero = immediately entering the shopping experience
+
+Hero uses a short cinematic background video.
+
+Video:
+6–10 seconds
+Loop
+Autoplay
+Muted
+PlaysInline
+Full width
+Object-fit cover
+
+Visual:
+- Dark luxury tailor atelier
+- 30–40대 male model
+- Bespoke suit
+- Lapel / shoulder / fabric details
+- Master adjusting the suit
+- Model moving naturally
+- Cinematic tracking
+
+[ENGLISH UI TEXT]
+
+THE PERFECT FIT
+
+Designed by intelligence.
+Perfected by the Master.
+
+SHOP THE COLLECTION
+START YOUR PROFILE
+
+Actual hero video can be supplied later.
+Until then use a HERO VIDEO PLACEHOLDER.
+The final MP4 should be replaceable without changing layout or functionality.
+
+[PRODUCT COLLECTION]
+
+Section:
+THE HOUSE COLLECTION
+
+Subcopy:
+Curated suits for every occasion.
+
+Total Product Data:
+8 products
+
+Visible at once:
+3 cards
+
+Product Card:
+570 × 713px
+
+Image Ratio:
+4:5
+
+Gap:
+24px
+
+Content width:
+1760px
+
+[PRODUCT CAROUSEL]
+
+Infinite Loop:
+YES
+
+Example:
+01 02 03
+02 03 04
+03 04 05
+...
+08 01 02
+01 02 03
+
+Interaction:
+- Auto Play
+- Mouse Drag
+- Previous Button
+- Next Button
+- Infinite Loop
+
+Auto Play:
+Every 5 seconds
+
+When cursor is over carousel:
+Pause Auto Play
+
+When cursor leaves:
+Resume Auto Play
+
+Mouse Drag:
+Desktop only
+Drag left/right to move carousel
+
+Navigation:
+Previous
+Next
+
+Animation:
+Transform-based
+500–600ms
+Ease-out
+
+Move:
+1 card per navigation action
+
+[PRODUCT CARD]
+
+Default:
+- Product Image
+- Product Name
+- Style
+- Price
+- Wishlist text control
+
+No decorative icons.
+
+Instead of heart icon:
+ADD TO WISHLIST
+or REMOVE FROM WISHLIST
+
+Hover:
+1. Image Scale 1.03
+2. Second product image Crossfade
+3. VIEW SUIT appears
+4. Floating Styling Preview activates
+5. Preview follows cursor
+
+Click:
+Product card → actual Product Detail
+
+Wishlist:
+Actual Wishlist state update
+
+[FLOATING STYLING PREVIEW]
+
+When mouse enters a product card:
+Show a small styling/accessory image next to the cursor.
+
+Example:
+EXECUTIVE NAVY SUIT
+- Silk Tie
+- Classic Watch
+- Leather Loafers
+
+CHARCOAL BUSINESS SUIT
+- Pocket Square
+- Leather Briefcase
+- Oxford Shoes
+
+BLACK FORMAL SUIT
+- Bow Tie
+- Cufflinks
+- Dress Shoes
+
+Preview behavior:
+- Opacity 0 → 1
+- Scale 0.95 → 1
+- Smooth cursor tracking
+- Keep preview approximately 20–30px away from cursor
+- Mouse leave → Fade Out
+- Duration 200–300ms
+
+Function names:
+FloatingStylingPreview
+OpenStylingPreview
+UpdatePreviewPosition
+CloseStylingPreview
+
+Desktop only.
+
+[PRODUCT DATA]
+
+01
+EXECUTIVE NAVY SUIT
+Modern Classic
+
+02
+CHARCOAL BUSINESS SUIT
+Contemporary Classic
+
+03
+BLACK FORMAL SUIT
+Formal
+
+04
+MIDNIGHT BESPOKE SUIT
+Bespoke
+
+05
+WARM GREY SUIT
+Soft Tailoring
+
+06
+BROWN HERITAGE SUIT
+British Classic
+
+07
+IVORY DINNER JACKET
+Formal Evening
+
+08
+DEEP OLIVE SUIT
+Modern Classic
+
+Each product data object should contain:
+Product ID
+Product Name
+Style
+Price
+Material
+Pattern
+Color
+Fit
+Images
+Styling Set
+
+[MANDATORY LOGO ASSET RULE]
+
+The HOUSE 007 logo must ALWAYS use the existing logo assets located in:
+
+web_01/lecture1/house007/image/logo/
+
+IMPORTANT:
+- Do NOT generate a new logo when assets exist in this folder.
+- Do NOT use a logo from another folder.
+- The images inside this folder are ordered by numeric filenames.
+- The numeric order determines the intended logo asset sequence/version.
+- Claude must inspect the existing assets in this folder before selecting a logo.
+- Use the appropriate logo asset according to its numeric order and intended usage.
+- Preserve the original logo proportions, typography, spacing and visual appearance.
+- Do not recreate, redraw, replace, or stylistically modify the logo.
+- This rule applies to the HOUSE 007 logo used in the Header, Landing Page and any other brand-logo placement.
+
+Example asset path:
+web_01/house007/image/logo/01.*
+web_01/house007/image/logo/02.*
+web_01/house007/image/logo/03.*
+
+If the actual file extension differs, use the existing file as provided.
+
+[PRODUCT IMAGE GENERATION]
+
+All product images should be generated according to the HOUSE 007 Visual Direction.
+
+Style:
+Premium British Tailoring
+Modern Luxury
+Editorial Fashion Photography
+Cinematic
+Photorealistic
+
+Model:
+- 30–40대 male
+- Sophisticated
+- Natural expression
+- Professional
+- No exaggerated pose
+
+Suit:
+- Realistic bespoke fit
+- Structured shoulders
+- Clear lapel details
+- Visible fabric texture
+- High-quality tailoring
+
+Environment:
+- Luxury Tailor Atelier
+- Dark British Interior
+- Wood
+- Leather
+- Stone
+- Minimal background
+
+Lighting:
+- Cinematic directional lighting
+- Soft shadows
+- Natural skin tone
+- High-end editorial lighting
+
+Composition:
+- 4:5
+- Full body or 3/4 body
+- Suit is the main subject
+- Enough negative space for UI
+
+Consistency:
+The same product must maintain the same model identity, suit, lighting, environment, camera perspective and color grading across Product Card and Product Detail images.
+
+[AI STYLE / CLIENT FILE]
+
+Core Concept:
+AI discovers the customer's style.
+MASTER perfects it.
+
+Entry:
+START YOUR PROFILE
+or
+OPEN CLIENT FILE
+
+The experience should look like a CONFIDENTIAL CLIENT FILE, not a generic survey.
+
+CLIENT FILE:
+Step 01 / 05
+
+STEP 01 — MISSION
+
+What brings you to the House?
+
+BUSINESS
+FORMAL
+DAILY
+SPECIAL
+
+STEP 02 — PRESENCE
+
+How would you like to be perceived?
+
+CONFIDENT
+REFINED
+POWERFUL
+DISCREET
+
+STEP 03 — STYLE
+
+Which style speaks to you?
+
+CLASSIC
+MODERN
+MINIMAL
+BOLD
+
+STEP 04 — FIT
+
+How do you prefer your suit to fit?
+
+SLIM
+MODERN
+RELAXED
+
+STEP 05 — COLOR
+
+Choose your preferred palette.
+
+NAVY
+CHARCOAL
+BLACK
+BROWN
+
+[CLIENT FILE FUNCTIONS]
+
+OpenClientFile
+CloseClientFile
+NextStep
+PreviousStep
+SelectAnswer
+SaveAnswer
+GenerateMissionProfile
+RestartProfile
+SaveClientProfile
+AddRecommendedProductToBag
+
+Each answer must be stored in application state.
+
+Example:
+mission = "business"
+presence = "refined"
+style = "classic"
+fit = "modern"
+color = "navy"
+
+NEXT is disabled until an answer is selected.
+
+Previous answers must remain when going back.
+
+Progress indicator:
+01 / 05
+
+Close:
+If user has entered data and attempts to close:
+
+CLOSE CLIENT FILE?
+
+CONTINUE
+CLOSE
+
+Do not lose user data without confirmation.
+
+[HOUSE INTELLIGENCE]
+
+After all 5 questions:
+
+ANALYZING YOUR PROFILE
+
+Reviewing your purpose...
+Refining your style...
+Matching your profile...
+
+Analysis animation:
+Approximately 1–2 seconds.
+
+Then generate a dynamic Mission Profile.
+
+[MISSION PROFILE]
+
+Example:
+
+MISSION PROFILE
+
+THE EXECUTIVE
+
+Business
+Refined
+Classic
+Modern Fit
+Navy
+
+Recommended product:
+EXECUTIVE NAVY SUIT
+
+Actions:
+VIEW SUIT
+ADD TO BAG
+SAVE TO MY HOUSE
+RESTART PROFILE
+
+The recommendation must change according to user selections.
+
+Do not create a fake static AI screen.
+
+Use actual recommendation logic based on stored selections.
+
+[RECOMMENDATION LOGIC]
+
+Example:
+
+BUSINESS
++
+REFINED
++
+CLASSIC
++
+MODERN
++
+NAVY
+→ EXECUTIVE NAVY SUIT
+
+FORMAL
++
+POWERFUL
++
+BOLD
++
+SLIM
++
+BLACK
+→ BLACK FORMAL SUIT
+
+The system should support multiple combinations and always return a valid recommendation from the available product data.
+
+[SAVE CLIENT FILE]
+
+Logged-in user:
+SAVE TO MY HOUSE
+→ Save clientProfile
+
+Guest:
+LOGIN TO SAVE
+or
+CONTINUE WITHOUT SAVING
+
+Saved profile should be accessible from MY HOUSE.
+
+[THE MASTER]
+
+This is a HOME section, not a separate page.
+
+Concept:
+INTELLIGENCE FINDS YOUR STYLE.
+THE MASTER PERFECTS IT.
+
+Show:
+- Master working
+- Fabric selection
+- Lapel adjustment
+- Fitting
+- Tailoring details
+- Craftsmanship
+
+Use the term MASTER instead of simply Tailor.
+
+Do not add BOOK A CONSULTATION unless an actual working appointment feature is implemented.
+
+[THE FABRIC / CRAFTSMANSHIP]
+
+Section:
+THE FABRIC
+
+Copy:
+Every great suit starts with the right fabric.
+
+This section uses interactive fabric swatches.
+
+Categories:
+
+MATERIAL
+WOOL
+CASHMERE
+LINEN
+SILK
+
+PATTERN
+SOLID
+PINSTRIPE
+CHECK
+HERRINGBONE
+PRINCE OF WALES
+
+COLOR
+NAVY
+CHARCOAL
+BLACK
+BROWN
+OLIVE
+
+FINISH
+MATTE
+SOFT
+LUSTROUS
+
+[FABRIC SWATCH INTERACTION]
+
+Swatches should look like real fabric textures, not generic flat color circles.
+
+Hover:
+- Enlarge texture preview
+- Show fabric information
+
+Example:
+
+SUPER 120s WOOL
+Lightweight / Breathable / Soft
+
+Color selection can update product recommendation or product image state.
+
+Fabric data must connect to Product data.
+
+[PRODUCT DATA CONNECTION]
+
+Product object:
+
+Product
+├─ Material
+├─ Pattern
+├─ Color
+├─ Fit
+├─ Price
+├─ Images
+└─ Styling Set
+
+Fabric selection
+→ Product recommendation
+→ Product Detail
+→ Product Options
+→ Add to Bag
+
+[AUDIO SYSTEM]
+
+Use subtle background music across the site.
+
+LANDING:
+- More cinematic
+- 007-inspired atmosphere
+- Slightly stronger presence
+
+HOME:
+- Luxury Jazz
+- Ambient
+- Very low volume
+- Continuous loop
+
+Suggested instrumentation:
+Soft Piano
+Upright Bass
+Brush Drum
+Subtle Strings
+Minimal Brass
+
+Do NOT use the actual James Bond theme.
+Create an original track with a similar luxury cinematic mood.
+
+GLOBAL AUDIO CONTROLLER
+
+Functions:
+Sound On
+Sound Off
+Volume Control
+
+Audio should continue naturally between pages/sections when possible.
+
+Autoplay audio must be user-controllable.
+
+[MY HOUSE]
+
+Only show functions that are actually implemented.
+
+Possible functions:
+
+MY ORDERS
+ORDER TRACKING
+WISHLIST
+BAG
+ADDRESS BOOK
+PAYMENT METHODS
+CLIENT FILE
+STYLE PROFILE
+COUPONS / POINTS
+REVIEW
+SETTINGS
+LOG OUT
+
+Do not show fake or non-functional menu items.
+
+[SHOPPING FUNCTIONS]
+
+Product:
+- Product List
+- Product Detail
+- Options
+- Size
+- Quantity
+- Wishlist
+- Add to Bag
+- Buy Now
+
+Cart:
+- Add
+- Remove
+- Quantity Update
+- Price Calculation
+- Bag Count
+- Mini Bag
+- Checkout
+
+Login:
+- Login
+- Sign Up
+- Logout
+- Guest
+
+Search:
+- Search
+- Product Result
+- Product Detail Connection
+
+AI:
+- Questionnaire
+- Recommendation
+- Product Connection
+- Save Profile
+
+[CORE USER FLOW]
+
+Shopping:
+
+LANDING
+→ HOME
+→ HERO
+→ THE HOUSE COLLECTION
+→ PRODUCT
+→ PRODUCT DETAIL
+→ OPTIONS
+→ ADD TO BAG
+→ BAG
+→ CHECKOUT
+
+AI:
+
+HOME
+→ AI STYLE
+→ OPEN CLIENT FILE
+→ MISSION
+→ PRESENCE
+→ STYLE
+→ FIT
+→ COLOR
+→ HOUSE INTELLIGENCE
+→ MISSION PROFILE
+→ RECOMMENDED SUIT
+→ PRODUCT DETAIL
+→ ADD TO BAG
+
+[IMPORTANT DEVELOPMENT PRINCIPLES]
+
+Do not create static or decorative interactions.
+
+Every button must perform a real action.
+
+Examples:
+
+ADD TO BAG
+→ Update Cart State
+→ Update Bag Count
+→ Open Mini Bag
+
+LOGIN
+→ Update Authentication State
+
+SEARCH
+→ Search actual Product Data
+
+WISHLIST
+→ Update Wishlist State
+
+CLIENT FILE
+→ Store Answers
+
+RECOMMENDATION
+→ Dynamically change based on answers
+
+PRODUCT
+→ Connect to Product Detail
+
+FABRIC SWATCH
+→ Update actual product/recommendation state
+
+SHOP DROPDOWN
+→ Actual navigation/filtering
+
+CAROUSEL
+→ Actual infinite loop / drag / button navigation
+
+FLOATING STYLING PREVIEW
+→ Actual mouse tracking
+
+AUDIO
+→ Actual global audio state
+
+[DO NOT]
+
+- Do not use Korean text in the website UI.
+- Do not translate specified English UI text into Korean.
+- Do not use decorative icons for navigation or controls.
+- Do not create unnecessary pages.
+- Do not create non-functional buttons.
+- Do not create placeholder navigation links except explicitly approved placeholders such as the Hero video.
+- Do not create fake static AI interactions.
+- Do not create pages outside the project scope.
+- Do not create a mobile responsive layout.
+- Do not use excessive animation.
+- Do not make every section look like a generic dashboard.
+- Do not copy James Bond branding or copyrighted music.
+- Do not add functions that cannot actually work.
+- Do not display menu items for features that are not implemented.
+
+[CURRENT DESIGN PRINCIPLE]
+
+The website should feel:
+Premium
+Cinematic
+Minimal
+Interactive
+Sophisticated
+British
+Confidential
+Modern
+
+The interface should rely on typography, spacing, imagery, motion and subtle lines rather than decorative icons.
+
+The final experience should feel like:
+A luxury tailoring house that happens to use advanced AI,
+not an AI website that happens to sell suits.
+
+
+[FINAL IMPLEMENTATION RULES]
+
+1. Build the website as a real interactive desktop e-commerce experience.
+2. Implement the specified pages, components, states and interactions.
+3. Do not create decorative buttons or fake interactions.
+4. Every visible navigation item must have a real destination or action.
+5. Every product card must connect to product data.
+6. At least 3 complete Product Detail pages must be functional.
+7. Cart quantities must respect inventory.
+8. Sold-out products and sizes must be handled correctly.
+9. Login and signup must change authentication state.
+10. Orders must create and display order/delivery status.
+11. Delivery Tracking must display actual order state data.
+12. Client File answers must affect recommendation results.
+13. Wishlist state must persist for the active user/session.
+14. Search must query the actual product data.
+15. Global audio state must persist across the website session.
+16. Use the supplied logo assets from the specified folder.
+17. Do not generate or replace the supplied logo.
+18. Main Banner/Hero assets must follow their own explicitly defined asset rules and must not be confused with the logo asset folder.
+19. Do not invent visual styling that is not specified.
+20. Do not add icons unless explicitly specified.
+21. Do not add shadows, rounded corners, borders, gradients, glows, blur, decorative lines, default fonts, or unrequested animations/transitions.
+22. Do not use framework or browser defaults when they conflict with this specification.
+23. Do not clip, truncate, hide, or replace text because of insufficient space.
+24. Preserve all specified English UI wording exactly.
+25. Design typography around the content so all text remains readable and intact.
+26. Do not create a mobile layout.
+27. Optimize and validate the desktop experience from 1440px to 1920px, with 1920px as the primary design reference.
+28. Reuse components and shared data structures where appropriate.
+29. Keep the visual system consistent across Landing, Home, Product Detail, Bag, Checkout and My House.
+30. If a requirement is not specified, do not invent a new design pattern. Keep it neutral and consistent with the established HOUSE 007 design language.
+
+[PRE-FLIGHT CHECK]
+
+Before implementation:
+- Confirm the project structure.
+- Confirm required pages.
+- Confirm the 3 minimum Product Detail pages.
+- Confirm all required shopping functions.
+- Confirm product / stock / account / cart / order data relationships.
+- Confirm the supplied logo asset path.
+- Confirm typography and visual restrictions.
+
+[FUNCTIONAL TEST CHECKLIST]
+
+Before considering the implementation complete, test:
+
+LANDING
+- Landing transition to Main Website
+- Audio behavior
+- Audio mute/unmute persistence
+
+NAVIGATION
+- Logo → Home
+- SHOP dropdown
+- AI STYLE → Client File
+- SEARCH overlay
+- LOGIN / Profile
+- BAG
+
+PRODUCT
+- Product Carousel infinite loop
+- Auto play
+- Hover pause
+- Mouse drag
+- Previous / Next
+- Product hover preview
+- Product Card → Product Detail
+- Wishlist
+
+CLIENT FILE
+- Open
+- Close confirmation
+- Step progression
+- Back
+- Answer selection
+- Answer persistence
+- Dynamic recommendation
+- Product Detail connection
+- Save Profile
+- Restart
+
+PRODUCT DETAIL
+- Image gallery
+- Product options
+- Size
+- Color
+- Pattern
+- Fit
+- Stock
+- Quantity
+- Wishlist
+- Add to Bag
+- Buy Now
+
+CART / BAG
+- Add
+- Remove
+- Quantity update
+- Price calculation
+- Inventory validation
+- Bag count
+- Mini Bag
+- Full Bag
+
+ACCOUNT
+- Login
+- Logout
+- Signup
+- Address
+- My House
+- Wishlist
+- Orders
+- Client File
+
+CHECKOUT
+- Delivery address
+- Payment
+- Review
+- Place Order
+- Order Complete
+
+DELIVERY
+- Order status
+- Delivery status
+- Track Order
+- My Orders
+
+EDGE STATES
+- Sold Out
+- Low Stock
+- Empty Bag
+- Empty Wishlist
+- Empty Orders
+- Search No Results
+- Login Error
+- Signup Error
+- Payment Error
+- Product Unavailable
+- Loading States
+- 404
+
+[FINAL QUALITY CONTROL]
+
+Before delivering the final implementation:
+
+- Check every button.
+- Check every link.
+- Check every modal.
+- Check every dropdown.
+- Check every product option.
+- Check stock behavior.
+- Check cart calculations.
+- Check login state.
+- Check signup state.
+- Check order creation.
+- Check delivery tracking.
+- Check Client File recommendation logic.
+- Check Wishlist behavior.
+- Check Search behavior.
+- Check audio persistence.
+- Check text clipping.
+- Check line wrapping.
+- Check viewport overflow.
+- Check that no unauthorized icons were added.
+- Check that no unauthorized shadows were added.
+- Check that no unauthorized rounded corners were added.
+- Check that no unauthorized borders were added.
+- Check that no unauthorized fonts were added.
+- Check that no unauthorized animations or transitions were added.
+
+If anything is visually or functionally ambiguous, follow the explicit HOUSE 007 specification instead of inventing a common UI pattern.
+
+END OF HOUSE 007 MASTER IMPLEMENTATION PROMPT

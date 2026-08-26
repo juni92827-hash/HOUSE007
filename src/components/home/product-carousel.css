@@ -1,0 +1,41 @@
+.h007-carousel {
+  position: relative;
+  width: 100%;
+  max-width: var(--h007-content-max);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.h007-carousel__viewport {
+  overflow: hidden;
+  cursor: grab;
+}
+
+.h007-carousel__track {
+  display: flex;
+  gap: 24px;
+  will-change: transform;
+}
+
+.h007-carousel__item {
+  flex-shrink: 0;
+}
+
+.h007-carousel__nav {
+  position: absolute;
+  top: 40%;
+  color: var(--h007-cream-dim);
+  padding: 8px 4px;
+}
+
+.h007-carousel__nav:hover {
+  color: var(--h007-cream);
+}
+
+.h007-carousel__nav--prev {
+  left: 0;
+}
+
+.h007-carousel__nav--next {
+  right: 0;
+}
