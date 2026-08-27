@@ -11,6 +11,20 @@
   cursor: pointer;
 }
 
+.h007-landing__portrait {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1400ms var(--h007-ease-out);
+}
+
+.h007-landing__portrait--visible {
+  opacity: 0.5;
+}
+
 .h007-landing__rings {
   position: absolute;
   inset: 0;

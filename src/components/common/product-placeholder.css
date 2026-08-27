@@ -23,3 +23,7 @@
   letter-spacing: 0.16em;
   color: var(--h007-cream-faint);
 }
+
+.h007-placeholder--image {
+  object-fit: cover;
+}

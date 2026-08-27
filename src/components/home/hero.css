@@ -8,6 +8,14 @@
   overflow: hidden;
 }
 
+.h007-hero__media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .h007-hero__video-placeholder {
   position: absolute;
   inset: 0;
@@ -34,15 +42,16 @@
 
 .h007-hero__title {
   font-family: var(--h007-font-display);
-  font-size: 88px;
-  font-weight: 600;
+  font-size: 72px;
+  font-weight: 500;
   letter-spacing: 0.02em;
 }
 
 .h007-hero__subcopy {
   margin-top: 20px;
   font-family: var(--h007-font-body);
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 400;
   color: var(--h007-cream-dim);
   line-height: 1.5;
 }

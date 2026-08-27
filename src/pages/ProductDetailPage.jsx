@@ -5,6 +5,7 @@ import { useProductsStore } from '../stores/productsStore';
 import { useCartStore } from '../stores/cartStore';
 import { useWishlistStore } from '../stores/wishlistStore';
 import { formatPrice } from '../utils/format';
+import { PRODUCT_GALLERY_VIEWS, getProductImagePath } from '../utils/assetPaths';
 import '../components/common/forms.css';
 import '../components/modals/bag-panel.css';
 import './product-detail-page.css';
@@ -81,7 +82,12 @@ function ProductDetailPage() {
       <div className="h007-content h007-product-detail__layout">
         <div className="h007-product-detail__gallery">
           <div className="h007-product-detail__main-image">
-            <ProductPlaceholder name={product.name} view={product.images?.[activeImage]} />
+            <ProductPlaceholder
+              key={activeImage}
+              name={product.name}
+              view={product.images?.[activeImage]}
+              src={getProductImagePath(product, PRODUCT_GALLERY_VIEWS[activeImage] ?? 'front')}
+            />
           </div>
           <div className="h007-product-detail__thumbnails">
             {(product.images ?? []).map((view, i) => (
@@ -91,7 +97,11 @@ function ProductDetailPage() {
                 className={`h007-product-detail__thumbnail ${activeImage === i ? 'h007-product-detail__thumbnail--active' : ''}`}
                 onClick={() => setActiveImage(i)}
               >
-                <ProductPlaceholder name={product.name} view={view} />
+                <ProductPlaceholder
+                  name={product.name}
+                  view={view}
+                  src={getProductImagePath(product, PRODUCT_GALLERY_VIEWS[i] ?? 'front')}
+                />
               </button>
             ))}
           </div>
@@ -187,7 +197,7 @@ function ProductDetailPage() {
             {relatedProducts.map((p) => (
               <Link key={p.id} to={`/product/${p.id}`} className="h007-product-detail__related-item">
                 <div className="h007-product-detail__related-image">
-                  <ProductPlaceholder name={p.name} view={p.images?.[0]} />
+                  <ProductPlaceholder name={p.name} view={p.images?.[0]} src={getProductImagePath(p, 'front')} />
                 </div>
                 <span>{p.name}</span>
                 <span className="h007-product-detail__related-price">{formatPrice(p.price)}</span>

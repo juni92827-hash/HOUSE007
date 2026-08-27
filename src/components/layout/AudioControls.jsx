@@ -13,7 +13,7 @@ function AudioControls() {
 
   return (
     <div className="h007-audio-controls">
-      <button type="button" className="h007-nav-text h007-audio-controls__toggle" onClick={toggleEnabled}>
+      <button type="button" className="h007-button-text h007-audio-controls__toggle" onClick={toggleEnabled}>
         {enabled ? 'SOUND ON' : 'SOUND OFF'}
       </button>
       <input

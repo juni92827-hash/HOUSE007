@@ -4,6 +4,7 @@ import ProductPlaceholder from '../common/ProductPlaceholder.jsx';
 import FloatingStylingPreview from './FloatingStylingPreview.jsx';
 import { useWishlistStore } from '../../stores/wishlistStore';
 import { formatPrice } from '../../utils/format';
+import { getProductImagePath } from '../../utils/assetPaths';
 import './product-card.css';
 
 /**
@@ -30,9 +31,9 @@ function ProductCard({ product }) {
     >
       <Link to={`/product/${product.id}`} className="h007-product-card__image-link">
         <div className={`h007-product-card__image ${isHovered ? 'h007-product-card__image--hover' : ''}`}>
-          <ProductPlaceholder name={product.name} view={product.images?.[0]} />
+          <ProductPlaceholder name={product.name} view={product.images?.[0]} src={getProductImagePath(product, 'front')} />
           <div className="h007-product-card__image h007-product-card__image--secondary">
-            <ProductPlaceholder name={product.name} view={product.images?.[1]} />
+            <ProductPlaceholder name={product.name} view={product.images?.[1]} src={getProductImagePath(product, 'side')} />
           </div>
         </div>
         {isHovered && <span className="h007-product-card__view">VIEW SUIT</span>}
@@ -41,7 +42,7 @@ function ProductCard({ product }) {
       <div className="h007-product-card__info">
         <div>
           <p className="h007-product-card__name">{product.name}</p>
-          <p className="h007-product-card__style">{product.style}</p>
+          {isHovered && <p className="h007-product-card__style h007-label">{product.style}</p>}
         </div>
         <p className="h007-product-card__price">{formatPrice(product.price)}</p>
       </div>

@@ -1,0 +1,1788 @@
+# HOUSE 007
+
+# SECOND REVISION + AI ASSET GENERATION MASTER PROMPT
+
+현재 구현된 HOUSE 007 웹사이트를 처음부터 다시 만들지 말고,
+현재 코드를 기준으로 2차 수정 및 완성도 개선을 진행한다.
+
+CURRENT WEBSITE:
+https://juni92827-hash.github.io/HOUSE007/
+
+이번 수정의 목표는 단순히 기능을 추가하는 것이 아니다.
+
+현재 구현된 사이트의 문제를 해결하고,
+HOUSE 007을 실제 Premium British Bespoke Tailoring E-commerce Website처럼 완성한다.
+
+---
+
+# 01. MOST IMPORTANT PRIORITY
+
+수정 순서:
+
+1. IMAGE ASSETS
+2. TYPOGRAPHY
+3. GLOBAL AUDIO
+4. PRODUCT CARD
+5. FABRIC
+6. HERO / MASTER / STYLING VISUALS
+7. VISUAL SIMPLIFICATION
+8. INTERACTION
+9. FUNCTIONAL QA
+
+새로운 Section을 무작정 추가하지 않는다.
+
+현재 구현된 구조를 최대한 유지하면서 완성도를 높인다.
+
+---
+
+# 02. BRAND IDENTITY
+
+BRAND:
+
+HOUSE 007
+
+CONCEPT:
+
+SECRET TAILORING HOUSE
+
+KEYWORDS:
+
+British Classic
+Modern Gentleman
+Bespoke Tailoring
+Luxury
+Secret House
+Precision
+Confidence
+Editorial
+Cinematic
+
+HOUSE 007 should feel like entering a private British tailoring house.
+
+NOT a generic shopping mall.
+
+NOT a colorful fashion marketplace.
+
+NOT a generic AI website.
+
+The visual experience should feel:
+
+QUIET
+DARK
+PRECISE
+LUXURIOUS
+EDITORIAL
+CINEMATIC
+
+---
+
+# 03. LOGO — ABSOLUTE RULE
+
+The HOUSE 007 logo already exists.
+
+USE ONLY:
+
+web_01/lecture1/house007/image/logo/
+
+IMPORTANT:
+
+The logo path has changed.
+
+OLD PATH:
+
+web_01/house007/image/logo/
+
+DO NOT USE THE OLD PATH.
+
+Use ONLY:
+
+web_01/lecture1/house007/image/logo/
+
+Do NOT:
+
+* Generate a new logo
+* Redraw the logo
+* Replace the logo
+* Restyle the logo
+* Change the logo typography
+* Change the logo proportions
+* Substitute another logo
+
+Use the supplied logo exactly as provided.
+
+The logo must appear on the LEFT side of the sticky Header.
+
+---
+
+# 04. AI IMAGE GENERATION — GLOBAL RULE
+
+Images are a major part of the HOUSE 007 experience.
+
+Do not leave important visual areas empty.
+
+If image generation is available, generate the required HOUSE 007 visual assets.
+
+If image generation is not available, create clearly named local asset paths so the images can be replaced later.
+
+DO NOT use:
+
+* Empty image placeholders
+* Blank grey boxes
+* Random stock images
+* Unrelated fashion images
+* Low-quality generic images
+* Cartoon imagery
+* Anime
+* Illustration
+* Cheap-looking CGI
+* Plastic-looking skin
+* Overly saturated colors
+
+All generated images must share one consistent visual identity.
+
+---
+
+# 05. GLOBAL IMAGE STYLE
+
+Every generated HOUSE 007 image should follow:
+
+SUBJECT:
+
+Premium Men's Bespoke Tailoring
+
+STYLE:
+
+Luxury British Fashion Editorial Photography
+
+MOOD:
+
+Dark
+Elegant
+Quiet
+Sophisticated
+Cinematic
+
+LIGHTING:
+
+Soft directional lighting
+Subtle contrast
+Controlled highlights
+Natural shadows
+
+COLOR:
+
+Black
+Charcoal
+Deep Navy
+Warm Grey
+Cream
+Dark Brown
+Muted Taupe
+
+CAMERA:
+
+Professional fashion photography
+Natural perspective
+Premium editorial composition
+
+TEXTURE:
+
+Realistic wool
+Realistic cotton
+Realistic leather
+Realistic skin
+Realistic fabric fibers
+
+DO NOT make images look artificially generated.
+
+The goal is:
+
+REALISTIC HIGH-END FASHION EDITORIAL PHOTOGRAPHY.
+
+No text.
+No watermark.
+No logo inside generated images.
+
+---
+
+# 06. PRODUCT IMAGE SYSTEM
+
+Create at least 8 different Product Images.
+
+Every Product Image must represent a different HOUSE 007 suit.
+
+All models and environments must feel like part of the same campaign.
+
+PRODUCTS:
+
+01 — EXECUTIVE NAVY SUIT
+02 — CHARCOAL BUSINESS SUIT
+03 — BLACK FORMAL SUIT
+04 — MIDNIGHT BESPOKE SUIT
+05 — BRITISH GREY SUIT
+06 — BROWN WOOL SUIT
+07 — PINSTRIPE EXECUTIVE SUIT
+08 — HERRINGBONE CLASSIC SUIT
+
+---
+
+# 07. PRODUCT 01 IMAGE
+
+EXECUTIVE NAVY SUIT
+
+Generate:
+
+A sophisticated British gentleman in his 30s wearing a perfectly tailored deep navy two-piece bespoke suit.
+
+Full-body luxury fashion editorial photograph.
+
+White dress shirt.
+Dark navy tie.
+Black leather dress shoes.
+
+The model stands naturally inside a private British tailoring studio.
+
+Dark charcoal environment.
+Subtle wood details.
+Soft directional studio lighting.
+
+Show the complete silhouette of the suit.
+
+Visible realistic wool texture.
+Sharp lapels.
+Natural proportions.
+Natural skin texture.
+
+Camera:
+
+Eye-level.
+Three-quarter fashion composition.
+
+Mood:
+
+Quiet.
+Confident.
+Sophisticated.
+
+No text.
+No logo.
+No watermark.
+
+---
+
+# 08. PRODUCT 02 IMAGE
+
+CHARCOAL BUSINESS SUIT
+
+Generate:
+
+A sophisticated British gentleman in his 30s wearing a premium charcoal grey bespoke business suit.
+
+White dress shirt.
+Black tie.
+Black leather shoes.
+
+Elegant private tailoring house interior.
+
+Dark charcoal and warm grey environment.
+
+Soft side lighting.
+
+Show:
+
+Shoulder construction
+Lapels
+Trousers
+Overall tailoring silhouette
+
+Realistic wool texture.
+
+Luxury British fashion editorial photography.
+
+No text.
+No logo.
+No watermark.
+
+---
+
+# 09. PRODUCT 03 IMAGE
+
+BLACK FORMAL SUIT
+
+Generate:
+
+A refined British gentleman wearing a perfectly tailored black formal suit.
+
+Black suit.
+White shirt.
+Black silk tie.
+Polished black leather shoes.
+
+Elegant dark interior.
+
+Minimal background.
+
+Dramatic but controlled side lighting.
+
+Sophisticated formal atmosphere.
+
+High-end men's fashion editorial photography.
+
+Realistic fabric.
+Natural skin.
+Natural proportions.
+
+No text.
+No logo.
+No watermark.
+
+---
+
+# 10. PRODUCT 04 IMAGE
+
+MIDNIGHT BESPOKE SUIT
+
+Generate:
+
+A modern British gentleman wearing a midnight blue bespoke suit.
+
+Dark navy-blue wool.
+White shirt.
+Black tie.
+
+Standing inside an exclusive private tailoring room.
+
+Dark wood.
+Muted warm lighting.
+
+Elegant cinematic atmosphere.
+
+Show the subtle difference between black and midnight navy.
+
+Premium editorial fashion photography.
+
+No text.
+No logo.
+No watermark.
+
+---
+
+# 11. PRODUCT 05 IMAGE
+
+BRITISH GREY SUIT
+
+Generate:
+
+A sophisticated British gentleman wearing a refined medium-to-dark grey tailored suit.
+
+White shirt.
+Dark grey tie.
+Black leather shoes.
+
+Classic British tailoring environment.
+
+Soft natural window light.
+
+Subtle background.
+
+Clean editorial composition.
+
+Emphasize:
+
+Fit
+Shoulder line
+Trouser silhouette
+Wool texture
+
+No text.
+No logo.
+No watermark.
+
+---
+
+# 12. PRODUCT 06 IMAGE
+
+BROWN WOOL SUIT
+
+Generate:
+
+A sophisticated gentleman wearing a deep brown premium wool bespoke suit.
+
+Cream shirt.
+Dark brown tie.
+Brown leather shoes.
+
+Warm dark tailoring studio.
+
+Muted brown and taupe palette.
+
+Soft cinematic lighting.
+
+Luxury British heritage atmosphere.
+
+Realistic wool texture.
+
+No text.
+No logo.
+No watermark.
+
+---
+
+# 13. PRODUCT 07 IMAGE
+
+PINSTRIPE EXECUTIVE SUIT
+
+Generate:
+
+A confident British businessman wearing a dark navy pinstripe bespoke suit.
+
+White shirt.
+Dark tie.
+Black leather shoes.
+
+Classic executive styling.
+
+Elegant dark office / private club environment.
+
+Subtle vertical pinstripes.
+
+Strong but natural posture.
+
+Luxury men's fashion editorial photography.
+
+No text.
+No logo.
+No watermark.
+
+---
+
+# 14. PRODUCT 08 IMAGE
+
+HERRINGBONE CLASSIC SUIT
+
+Generate:
+
+A refined British gentleman wearing a charcoal herringbone wool bespoke suit.
+
+White shirt.
+Dark tie.
+Black leather shoes.
+
+Classic British tailoring room.
+
+Soft directional light.
+
+Emphasize the herringbone texture.
+
+Premium realistic textile detail.
+
+No text.
+No logo.
+No watermark.
+
+---
+
+# 15. PRODUCT IMAGE CONSISTENCY
+
+All 8 product images must feel like:
+
+ONE HOUSE 007 CAMPAIGN.
+
+Keep consistent:
+
+Lighting
+Image quality
+Model age range
+Fashion styling
+Color grading
+Camera quality
+Editorial direction
+
+Do not make every image look like it came from a different website.
+
+---
+
+# 16. PRODUCT DETAIL IMAGES
+
+At least 3 products require complete Product Detail galleries.
+
+Each Product Detail should have:
+
+01 FRONT
+02 SIDE
+03 BACK
+04 DETAIL
+05 FABRIC
+
+Images must be related to the same product.
+
+Do not use unrelated images between gallery positions.
+
+Image transitions:
+
+CROSSFADE
+
+Duration:
+
+300ms
+
+---
+
+# 17. PRODUCT DETAIL CLOSE-UP
+
+Generate additional close-up imagery showing:
+
+Lapel
+Button
+Cuff
+Pocket
+Stitching
+Fabric
+Shoulder construction
+
+The purpose is to communicate BESPOKE QUALITY.
+
+---
+
+# 18. FABRIC IMAGE GENERATION
+
+THE FABRIC section MUST contain real-looking fabric texture images.
+
+Do not represent Fabric only with CSS color blocks.
+
+Generate at least 8 individual Fabric Texture Images.
+
+Fabric Types:
+
+01 SUPER 120s WOOL
+02 SUPER 150s WOOL
+03 CASHMERE WOOL
+04 LINEN
+05 SILK
+06 FLANNEL
+07 HERRINGBONE
+08 HOUNDSTOOTH
+
+---
+
+# 19. FABRIC IMAGE PROMPT
+
+For every Fabric image:
+
+Create a high-resolution macro photograph of premium tailoring fabric.
+
+EXTREME CLOSE-UP.
+
+Only the fabric surface is visible.
+
+No person.
+No mannequin.
+No clothing.
+No accessories.
+
+Show realistic individual fibers and weave structure.
+
+Soft directional light.
+
+Realistic textile depth.
+
+Natural material imperfections.
+
+Luxury British tailoring material sample photography.
+
+Dark neutral background.
+
+The image must look physically photographed,
+not like a flat digital pattern.
+
+---
+
+# 20. FABRIC-SPECIFIC VISUAL DIRECTION
+
+SUPER 120s WOOL:
+
+Fine smooth navy wool.
+Dense premium weave.
+Subtle natural fibers.
+
+SUPER 150s WOOL:
+
+Extremely fine dark charcoal wool.
+Elegant smooth surface.
+Fine premium weave.
+
+CASHMERE WOOL:
+
+Soft luxurious dark grey material.
+Visible soft fibers.
+Rich texture.
+
+LINEN:
+
+Natural warm cream linen.
+Visible coarse fibers.
+Slight irregularity.
+
+SILK:
+
+Deep midnight black silk.
+Subtle controlled sheen.
+Fine smooth fibers.
+
+FLANNEL:
+
+Soft charcoal flannel.
+Dense brushed surface.
+Warm tactile appearance.
+
+HERRINGBONE:
+
+Dark grey herringbone.
+Clearly visible repeating woven structure.
+
+HOUNDSTOOTH:
+
+Black and white / charcoal houndstooth.
+Precise woven pattern.
+Premium wool texture.
+
+---
+
+# 21. FABRIC INTERACTION
+
+Fabric cards must be interactive.
+
+Click Fabric:
+
+→ ACTIVE STATE
+
+→ Large Texture Preview
+
+→ Material Information
+
+Example:
+
+MATERIAL
+SUPER 120s WOOL
+
+PATTERN
+PLAIN
+
+COLOR
+NAVY
+
+FINISH
+MATTE
+
+Selected Fabric can influence:
+
+Product Preview
+Recommendation
+Product Detail
+
+---
+
+# 22. THE MASTER IMAGE GENERATION
+
+THE MASTER section requires an image.
+
+Generate:
+
+A highly skilled British master tailor in his 40s or 50s working inside a private bespoke tailoring house.
+
+Focus primarily on craftsmanship.
+
+Show:
+
+Tailor's hands
+Fabric
+Measuring
+Cutting
+Lapel construction
+Suit fitting
+
+The environment should contain:
+
+Dark wood
+Tailoring table
+Fabric rolls
+Classic tools
+
+Lighting:
+
+Warm directional side lighting.
+
+Mood:
+
+Quiet craftsmanship.
+Experience.
+Precision.
+Tradition.
+
+Do not make it look like a generic office worker.
+
+Luxury British editorial photography.
+
+No text.
+No logo.
+No watermark.
+
+---
+
+# 23. STYLING IMAGE GENERATION
+
+Generate premium editorial images showing a modern gentleman wearing HOUSE 007 tailoring.
+
+Locations can include:
+
+Private club
+Luxury hotel
+Classic London-inspired architecture
+Elegant office
+Tailoring house
+
+Avoid cliché James Bond imitation.
+
+The reference is:
+
+Modern British Gentleman.
+
+Not a direct movie character reproduction.
+
+Natural poses.
+
+Subtle confidence.
+
+Premium editorial photography.
+
+---
+
+# 24. HERO IMAGE GENERATION
+
+The Main Hero requires one strong visual.
+
+Generate:
+
+A sophisticated male model wearing an immaculate bespoke dark navy or black suit.
+
+Full or three-quarter body.
+
+Strong elegant silhouette.
+
+Dark cinematic environment.
+
+Large negative space for website typography.
+
+The model should not block the text area.
+
+Soft directional light.
+
+Premium luxury fashion campaign.
+
+The image must immediately communicate:
+
+HOUSE 007
+BESPOKE TAILORING
+BRITISH LUXURY
+
+No text inside the image.
+
+No logo.
+No watermark.
+
+---
+
+# 25. LANDING VISUAL
+
+The Landing experience is inspired by the classic 007 gun-barrel introduction.
+
+Do not reproduce copyrighted movie assets.
+
+Create an original HOUSE 007 interpretation.
+
+Sequence:
+
+DARK SCREEN
+
+↓
+
+SUBTLE MOVEMENT FROM LEFT / RIGHT
+
+↓
+
+CENTRAL AIMING COMPOSITION
+
+↓
+
+SUIT / GENTLEMAN APPEARS
+
+↓
+
+USER INTERACTION
+
+↓
+
+ENTER THE HOUSE
+
+↓
+
+MAIN WEBSITE
+
+The experience should feel cinematic but original.
+
+---
+
+# 26. VIDEO GENERATION
+
+If video generation is available, create an original short cinematic fashion video.
+
+Video direction:
+
+A sophisticated male gentleman in a perfectly tailored dark suit walking slowly through a private British tailoring house.
+
+Camera:
+
+Slow tracking shot.
+
+Movement:
+
+Very subtle.
+
+Lighting:
+
+Dark cinematic studio lighting.
+
+Mood:
+
+Luxury.
+Mystery.
+Confidence.
+
+Duration:
+
+6–10 seconds.
+
+Aspect Ratio:
+
+16:9
+
+No dialogue.
+
+No text.
+
+No logo.
+
+No watermark.
+
+Use the video for Hero / Landing where appropriate.
+
+---
+
+# 27. VIDEO BEHAVIOR
+
+Hero Video:
+
+AUTOPLAY
+MUTED
+LOOP
+PLAYSINLINE
+
+Do not allow video to interrupt the user experience.
+
+When the video is unavailable,
+use the generated Hero Image as fallback.
+
+---
+
+# 28. GLOBAL AUDIO
+
+Current website music is not playing.
+
+Fix this.
+
+Use ONE Global Audio Controller.
+
+Do not create separate audio players for each page.
+
+Audio should continue through:
+
+LANDING
+→ HOME
+→ COLLECTION
+→ AI STYLE
+→ PRODUCT DETAIL
+→ BAG
+→ CHECKOUT
+
+Do not restart audio when navigating.
+
+---
+
+# 29. AUDIO GENERATION
+
+If music generation is available, create an original HOUSE 007 background music track.
+
+Music direction:
+
+Elegant
+Minimal
+Cinematic
+Mysterious
+British
+Sophisticated
+
+Instrumentation:
+
+Soft piano
+Subtle strings
+Low atmospheric bass
+Very restrained percussion
+
+Tempo:
+
+Slow.
+
+No vocals.
+
+No recognizable melody from existing James Bond music.
+
+Do not copy or reproduce copyrighted movie music.
+
+The music should feel like:
+
+A private luxury tailoring house after dark.
+
+---
+
+# 30. AUDIO FILE
+
+Recommended:
+
+house-theme.mp3
+
+Place in:
+
+web_01/lecture1/house007/audio/
+
+If generated audio cannot be directly saved,
+create the correct asset reference and make the system ready for the final audio file.
+
+---
+
+# 31. AUDIO AUTOPLAY POLICY
+
+Browsers may block autoplay.
+
+Therefore:
+
+The first user interaction on Landing must activate the audio.
+
+Example:
+
+ENTER THE HOUSE
+
+or
+
+SOUND ON
+
+Once activated:
+
+Audio continues globally.
+
+---
+
+# 32. AUDIO CONTROL
+
+Allow:
+
+SOUND ON
+SOUND OFF
+
+No decorative audio icon is necessary.
+
+Audio state must persist during navigation.
+
+---
+
+# 33. TYPOGRAPHY
+
+Use exactly TWO fonts.
+
+PRIMARY DISPLAY:
+
+Cormorant Garamond
+
+SECONDARY UI:
+
+Manrope
+
+No other fonts.
+
+Do not use:
+
+Inter
+Arial
+Helvetica
+Roboto
+system-ui
+or any other font.
+
+---
+
+# 34. TYPOGRAPHY SCALE
+
+HERO TITLE:
+
+72px
+500
+
+SECTION TITLE:
+
+56px
+500
+
+PRODUCT DETAIL TITLE:
+
+48px
+500
+
+PRODUCT NAME:
+
+18px
+500
+
+BODY:
+
+15px
+400
+Line-height 1.7
+
+NAVIGATION:
+
+13px
+500
+Letter-spacing 0.08em
+
+BUTTON:
+
+13px
+500
+Letter-spacing 0.12em
+
+LABEL:
+
+11px
+500
+Letter-spacing 0.12em
+
+PRICE:
+
+15px
+500
+
+HERO SUBTITLE:
+
+18px
+400
+
+---
+
+# 35. TYPOGRAPHY SIMPLIFICATION
+
+The current website contains too much text and too many different text sizes.
+
+Simplify.
+
+Do not show all product information at once.
+
+Product Card:
+
+PRODUCT IMAGE
+PRODUCT NAME
+PRICE
+
+Only.
+
+Material / Pattern / Fit / Description:
+
+Show on Hover or Product Detail.
+
+The design should feel editorial.
+
+---
+
+# 36. TEXT SAFETY
+
+Never:
+
+* Clip text
+* Truncate text
+* Use ellipsis
+* Hide text
+* Remove words
+* Change specified wording
+* Break words unnaturally
+* Make text unreadably small
+
+Allow natural line breaks.
+
+Typography must be designed around the content.
+
+---
+
+# 37. PRODUCT CAROUSEL
+
+Current Product Card navigation uses text.
+
+Fix it.
+
+Add actual functional Previous / Next controls.
+
+Use minimal arrow controls:
+
+←
+→
+
+These are functional controls and are therefore allowed.
+
+Do not turn them into large decorative buttons.
+
+---
+
+# 38. PRODUCT CAROUSEL BEHAVIOR
+
+8 Products.
+
+Must support:
+
+Infinite Loop
+Auto Play
+Previous
+Next
+Mouse Drag
+Hover Pause
+
+Mouse Drag:
+
+Drag left → next products
+
+Drag right → previous products
+
+Hover:
+
+Pause Auto Play
+
+Mouse Leave:
+
+Resume Auto Play
+
+Last product:
+
+→ First product
+
+First product:
+
+→ Last product
+
+---
+
+# 39. PRODUCT CARD HOVER
+
+Default:
+
+Product Image
+Product Name
+Price
+
+Hover:
+
+Secondary Product Image
+
+or
+
+Small Styling Preview
+
+Do not create huge popups.
+
+Do not cover the entire product card with unnecessary information.
+
+---
+
+# 40. CURSOR STYLING PREVIEW
+
+When hovering over a Product Card,
+a small styling preview may appear near the cursor.
+
+It should be:
+
+Small
+Subtle
+Fast
+Elegant
+
+The preview may show:
+
+MODEL WEARING THE SUIT
+or
+ACCESSORY STYLING
+
+It must not block the product.
+
+It follows the cursor smoothly.
+
+Do not create a large tooltip.
+
+---
+
+# 41. HEADER
+
+Header:
+
+STICKY
+
+LEFT:
+
+HOUSE 007 LOGO
+
+NAVIGATION:
+
+SHOP
+AI STYLE
+THE MASTER
+THE FABRIC
+MY HOUSE
+SEARCH
+BAG
+
+Guest:
+
+LOGIN
+
+Authenticated:
+
+MR. [NAME]
+
+---
+
+# 42. SHOP DROPDOWN
+
+SHOP Hover:
+
+Dropdown appears.
+
+Categories:
+
+SUITS
+TUXEDOS
+OUTERWEAR
+ACCESSORIES
+
+Use a subtle transition.
+
+Do not make the dropdown excessively large.
+
+---
+
+# 43. MAIN HERO
+
+Hero should be image-driven.
+
+Minimal text.
+
+Example:
+
+THE PERFECT FIT.
+
+Short supporting copy.
+
+CTA.
+
+Do not fill the Hero with paragraphs.
+
+---
+
+# 44. AI STYLE / CLIENT FILE
+
+Use step-by-step interaction.
+
+MISSION
+→ PRESENCE
+→ STYLE
+→ FIT
+→ COLOR
+
+After completion:
+
+HOUSE INTELLIGENCE
+
+↓
+
+MISSION PROFILE
+
+↓
+
+RECOMMENDED PRODUCTS
+
+Recommendations must use actual Product Data.
+
+---
+
+# 45. PRODUCT DETAIL
+
+LEFT:
+
+Large Product Image
+
+RIGHT:
+
+Product Name
+Price
+Material
+Color
+Pattern
+Fit
+Size
+Stock
+Quantity
+ADD TO BAG
+BUY NOW
+
+Keep the layout spacious.
+
+---
+
+# 46. STOCK
+
+Use actual Product Data.
+
+States:
+
+IN STOCK
+
+ONLY 3 LEFT
+
+SOLD OUT
+
+If stock is 0:
+
+ADD TO BAG
+
+must be disabled.
+
+Size-specific inventory must also work.
+
+---
+
+# 47. BAG
+
+Display:
+
+Product Image
+Product
+Option
+Quantity
+Price
+Remove
+
+ORDER SUMMARY:
+
+SUBTOTAL
+SHIPPING
+TOTAL
+
+CHECKOUT
+
+Product Image must appear in Bag.
+
+---
+
+# 48. LOGIN / SIGN UP
+
+LOGIN:
+
+EMAIL
+PASSWORD
+LOGIN
+JOIN THE HOUSE
+
+SIGN UP:
+
+FIRST NAME
+LAST NAME
+EMAIL
+PHONE
+PASSWORD
+CONFIRM PASSWORD
+
+DELIVERY:
+
+POSTAL CODE
+ADDRESS
+DETAIL ADDRESS
+
+---
+
+# 49. MY HOUSE
+
+MY HOUSE:
+
+MY ORDERS
+DELIVERY TRACKING
+WISHLIST
+CLIENT FILE
+ADDRESS BOOK
+SETTINGS
+LOG OUT
+
+---
+
+# 50. SEARCH
+
+Search actual Product Data.
+
+Results:
+
+Product Image
+Product Name
+Price
+
+No Results:
+
+NO RESULTS
+
+---
+
+# 51. WISHLIST
+
+ADD TO WISHLIST
+
+must actually save the Product.
+
+MY HOUSE
+→ WISHLIST
+
+---
+
+# 52. CHECKOUT
+
+BAG
+→ DELIVERY
+→ PAYMENT
+→ REVIEW
+→ ORDER COMPLETE
+
+Order creation must work.
+
+---
+
+# 53. DELIVERY TRACKING
+
+ORDER CONFIRMED
+→ PREPARING
+→ SHIPPED
+→ IN TRANSIT
+→ DELIVERED
+
+Display the current state.
+
+---
+
+# 54. INVENTORY
+
+Inventory must update when an order is placed.
+
+Example:
+
+Stock 3
+→ purchase 1
+→ Stock 2
+
+Stock 0:
+
+SOLD OUT
+
+Do not allow purchasing more than available stock.
+
+---
+
+# 55. VISUAL RESTRICTIONS
+
+Do NOT add unrequested:
+
+Shadow
+Border
+Rounded Corner
+Glow
+Gradient
+Blur
+Decorative Icon
+Excessive Animation
+
+Do not rely on framework defaults.
+
+---
+
+# 56. ICON RULE
+
+Do not use decorative icons.
+
+Functional arrow controls are allowed:
+
+←
+→
+
+Text-based navigation remains the default.
+
+Do not add random:
+
+Search icon
+Bell icon
+User icon
+Cart icon
+Heart icon
+Menu icon
+
+unless explicitly required.
+
+---
+
+# 57. COLOR SYSTEM
+
+PRIMARY:
+
+BLACK
+CHARCOAL
+OFF-WHITE
+CREAM
+
+ACCENT:
+
+DEEP NAVY
+MUTED GREY
+WARM TAUPE
+
+No bright primary colors.
+
+---
+
+# 58. DESKTOP
+
+Desktop only.
+
+Primary:
+
+1920px
+
+Supported:
+
+1440px–1920px
+
+No separate Mobile Website.
+
+At 1440px:
+
+No text overflow.
+No navigation collision.
+No broken layout.
+No distorted images.
+
+---
+
+# 59. ASSET STRUCTURE
+
+Use:
+
+web_01/lecture1/house007/image/logo/
+
+web_01/lecture1/house007/image/products/
+
+web_01/lecture1/house007/image/fabric/
+
+web_01/lecture1/house007/image/master/
+
+web_01/lecture1/house007/image/styling/
+
+web_01/lecture1/house007/video/
+
+web_01/lecture1/house007/audio/
+
+Logo must use the existing supplied assets.
+
+Other generated assets should use the appropriate folders.
+
+---
+
+# 60. DO NOT OVERDESIGN
+
+DO NOT ADD MORE SECTIONS.
+
+DO NOT ADD MORE TEXT.
+
+DO NOT ADD MORE UI.
+
+DO NOT ADD MORE CARDS.
+
+DO NOT ADD unnecessary features.
+
+The current priority is:
+
+BETTER IMAGES
+BETTER TYPOGRAPHY
+WORKING AUDIO
+BETTER PRODUCT CAROUSEL
+REAL FABRIC VISUALS
+CLEANER LAYOUT
+BETTER INTERACTION
+
+---
+
+# 61. FINAL DESIGN PRINCIPLE
+
+HOUSE 007 should feel like:
+
+A PRIVATE BRITISH TAILORING HOUSE.
+
+Not a generic e-commerce website.
+
+Not an app dashboard.
+
+Not an AI product.
+
+The luxury should come from:
+
+TYPOGRAPHY
+IMAGERY
+SPACE
+MATERIAL
+MOTION
+DETAIL
+
+Use restraint.
+
+Luxury is created by what is removed as much as what is added.
+
+---
+
+# 62. FINAL QA
+
+Before finishing, test the actual website in the browser.
+
+IMAGE:
+
+* Logo loads from new path
+* Old logo path is not used
+* 8 Product Images appear
+* Product Detail Images appear
+* Fabric Images appear
+* Master Image appears
+* Styling Images appear
+* Hero Image / Video appears
+
+AUDIO:
+
+* Audio starts after first user interaction
+* Audio does not restart on navigation
+* SOUND ON works
+* SOUND OFF works
+* Audio state persists
+
+TYPOGRAPHY:
+
+* Cormorant Garamond works
+* Manrope works
+* No unauthorized fonts
+* Typography hierarchy is clear
+* Text does not clip
+* Text does not overflow
+
+CAROUSEL:
+
+* Previous works
+* Next works
+* Mouse Drag works
+* Infinite Loop works
+* Auto Play works
+* Hover Pause works
+
+PRODUCT:
+
+* Product Card → Detail
+* Product options work
+* Size works
+* Stock works
+* Sold Out works
+* Add to Bag works
+
+ACCOUNT:
+
+* Login works
+* Signup works
+* Logout works
+* My House works
+* Wishlist works
+* Orders work
+* Delivery Tracking works
+
+AI STYLE:
+
+* Client File works
+* Steps work
+* Answers persist
+* Recommendation changes according to answers
+* Recommendation connects to Product Detail
+
+SHOPPING:
+
+* Cart quantity works
+* Inventory updates
+* Checkout works
+* Order creation works
+* Delivery status works
+
+LAYOUT:
+
+* 1440px works
+* 1920px works
+* No broken layout
+* No excessive UI
+* No unauthorized shadows
+* No unauthorized borders
+* No unauthorized rounded corners
+* No unauthorized gradients
+* No unauthorized icons
+
+---
+
+# FINAL COMMAND
+
+Modify the existing HOUSE 007 implementation now.
+
+Do not create a static mockup.
+
+Do not stop after changing the appearance.
+
+Implement the complete visual and functional revision.
+
+Generate and connect the required AI visual assets where possible.
+
+Use the supplied HOUSE 007 logo.
+
+Fix the missing Product Images.
+
+Fix the missing Fabric Images.
+
+Fix the missing Audio.
+
+Fix the Typography.
+
+Fix the Product Carousel Controls.
+
+Simplify the overall visual density.
+
+Keep the website premium, quiet, cinematic and editorial.
+
+After implementation, test every interaction in the browser.
+
+Do not finish until the website passes the complete QA checklist above.
+
+END OF HOUSE 007 SECOND REVISION MASTER PROMPT

@@ -15,6 +15,14 @@
   transform: scale(1);
 }
 
+.h007-styling-preview__image {
+  display: block;
+  width: 96px;
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
 .h007-styling-preview__title {
   display: block;
   font-family: var(--h007-font-body);

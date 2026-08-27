@@ -55,20 +55,20 @@
 
 .h007-product-card__name {
   font-family: var(--h007-font-display);
-  font-size: 19px;
+  font-size: 18px;
+  font-weight: 500;
   color: var(--h007-cream);
 }
 
 .h007-product-card__style {
-  margin-top: 4px;
-  font-family: var(--h007-font-body);
-  font-size: 14px;
+  margin-top: 6px;
   color: var(--h007-cream-dim);
 }
 
 .h007-product-card__price {
   font-family: var(--h007-font-body);
-  font-size: 16px;
+  font-size: 15px;
+  font-weight: 500;
   color: var(--h007-cream);
 }
 

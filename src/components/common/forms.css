@@ -7,8 +7,9 @@
 
 .h007-field__label {
   font-family: var(--h007-font-body);
-  font-size: 12px;
-  letter-spacing: 0.14em;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
   color: var(--h007-cream-faint);
 }
 
@@ -52,7 +53,9 @@
   color: var(--h007-cream);
   font-family: var(--h007-font-body);
   font-size: 13px;
-  letter-spacing: 0.14em;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   margin-top: 8px;
 }
 

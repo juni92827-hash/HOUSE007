@@ -15,9 +15,6 @@
 
 .h007-fabric__category-label {
   display: block;
-  font-family: var(--h007-font-body);
-  font-size: 12px;
-  letter-spacing: 0.16em;
   color: var(--h007-cream-faint);
   margin-bottom: 14px;
 }
@@ -47,12 +44,59 @@
   color: var(--h007-bg);
 }
 
+.h007-fabric__swatch--texture {
+  padding: 8px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 108px;
+}
+
+.h007-fabric__swatch-thumb {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.h007-fabric__swatch-thumb .h007-placeholder__name {
+  font-size: 11px;
+  padding: 0 8px;
+}
+
+.h007-fabric__swatch-label {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
 .h007-fabric__preview {
   margin-top: 40px;
   min-height: 48px;
   display: flex;
   flex-direction: column;
   gap: 6px;
+}
+
+.h007-fabric__preview-image {
+  width: 240px;
+  aspect-ratio: 4 / 3;
+  margin-bottom: 8px;
+}
+
+.h007-fabric__preview-meta {
+  display: flex;
+  gap: 40px;
+}
+
+.h007-fabric__preview-meta dt {
+  color: var(--h007-cream-faint);
+  margin-bottom: 4px;
+}
+
+.h007-fabric__preview-meta dd {
+  margin: 0;
+  font-family: var(--h007-font-body);
+  font-size: 14px;
+  color: var(--h007-cream);
 }
 
 .h007-fabric__preview-title {
@@ -75,9 +119,6 @@
 
 .h007-fabric__matches-count {
   display: block;
-  font-family: var(--h007-font-body);
-  font-size: 12px;
-  letter-spacing: 0.14em;
   color: var(--h007-cream-faint);
   margin-bottom: 14px;
 }

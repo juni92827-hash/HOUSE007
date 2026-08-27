@@ -23,6 +23,19 @@
   aspect-ratio: 4 / 5;
 }
 
+.h007-product-detail__main-image .h007-placeholder {
+  animation: h007-crossfade 300ms ease;
+}
+
+@keyframes h007-crossfade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .h007-product-detail__thumbnails {
   margin-top: 16px;
   display: flex;
@@ -41,7 +54,8 @@
 
 .h007-product-detail__name {
   font-family: var(--h007-font-display);
-  font-size: 34px;
+  font-size: 48px;
+  font-weight: 500;
   color: var(--h007-cream);
 }
 
@@ -55,7 +69,8 @@
 .h007-product-detail__price {
   margin-top: 16px;
   font-family: var(--h007-font-body);
-  font-size: 22px;
+  font-size: 15px;
+  font-weight: 500;
   color: var(--h007-cream);
 }
 
@@ -77,7 +92,8 @@
 .h007-product-detail__specs dt {
   font-family: var(--h007-font-body);
   font-size: 11px;
-  letter-spacing: 0.14em;
+  font-weight: 500;
+  letter-spacing: 0.12em;
   color: var(--h007-cream-faint);
 }
 
@@ -121,7 +137,9 @@
 .h007-product-detail__stock-label {
   margin-top: 10px;
   font-family: var(--h007-font-body);
-  font-size: 13px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
   color: var(--h007-cream-dim);
 }
 

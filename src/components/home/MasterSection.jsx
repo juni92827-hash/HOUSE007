@@ -1,4 +1,5 @@
 import ProductPlaceholder from '../common/ProductPlaceholder.jsx';
+import { getMasterImagePath } from '../../utils/assetPaths';
 import './master-section.css';
 
 const CRAFT_VIEWS = ['FABRIC SELECTION', 'LAPEL ADJUSTMENT', 'THE FITTING'];
@@ -21,7 +22,7 @@ function MasterSection() {
         <div className="h007-master__gallery">
           {CRAFT_VIEWS.map((view) => (
             <div className="h007-master__frame" key={view}>
-              <ProductPlaceholder name="THE MASTER" view={view} />
+              <ProductPlaceholder name="THE MASTER" view={view} src={getMasterImagePath(view)} />
             </div>
           ))}
         </div>

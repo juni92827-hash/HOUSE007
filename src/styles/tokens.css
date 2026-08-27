@@ -9,9 +9,9 @@
   --h007-error: #c96a4e;
   --h007-success: #8a9a7c;
 
-  /* typography */
-  --h007-font-display: 'Playfair Display', 'Times New Roman', serif;
-  --h007-font-body: 'EB Garamond', 'Times New Roman', serif;
+  /* typography — exactly two typefaces per the HOUSE 007 spec, no others */
+  --h007-font-display: 'Cormorant Garamond', serif;
+  --h007-font-body: 'Manrope', sans-serif;
 
   /* layout */
   --h007-content-max: 1760px;

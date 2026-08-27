@@ -1,25 +1,20 @@
 import { useEffect, useRef } from 'react';
-import { useLocation } from 'react-router-dom';
 import { useAudioStore } from '../../stores/audioStore';
+import { AUDIO_TRACK_PATH } from '../../utils/assetPaths';
 
 /**
- * GlobalAudio — mounts the two ambient tracks (landing / home) and drives
- * them from audioStore. No mp3 files ship yet (see project notes), so the
- * <audio> elements sit with an empty src until final music is supplied;
- * playback simply no-ops until then, but the on/off + volume state and
- * cross-page persistence are fully functional.
+ * GlobalAudio — mounts ONE ambient <audio> element for the entire site and
+ * drives it from audioStore. The `src` never changes with navigation, so
+ * playback is never interrupted or restarted when moving between pages
+ * (Landing -> Home -> Collection -> AI Style -> Product Detail -> Bag ->
+ * Checkout). No mp3 ships yet, so playback simply no-ops until a real file
+ * is placed at AUDIO_TRACK_PATH; the on/off + volume state is fully
+ * functional regardless.
  */
 function GlobalAudio() {
-  const location = useLocation();
   const enabled = useAudioStore((state) => state.enabled);
   const volume = useAudioStore((state) => state.volume);
-  const track = useAudioStore((state) => state.track);
-  const setTrack = useAudioStore((state) => state.setTrack);
   const audioRef = useRef(null);
-
-  useEffect(() => {
-    setTrack(location.pathname === '/' ? 'landing' : 'home');
-  }, [location.pathname, setTrack]);
 
   useEffect(() => {
     if (!audioRef.current) return;
@@ -29,11 +24,9 @@ function GlobalAudio() {
     } else {
       audioRef.current.pause();
     }
-  }, [enabled, volume, track]);
+  }, [enabled, volume]);
 
-  const src = track === 'landing' ? '/audio/landing.mp3' : '/audio/home.mp3';
-
-  return <audio ref={audioRef} src={src} loop />;
+  return <audio ref={audioRef} src={AUDIO_TRACK_PATH} loop />;
 }
 
 export default GlobalAudio;

@@ -107,11 +107,21 @@ function ProductCarousel({ products }) {
         </div>
       </div>
 
-      <button type="button" className="h007-nav-text h007-carousel__nav h007-carousel__nav--prev" onClick={goPrev}>
-        PREVIOUS
+      <button
+        type="button"
+        className="h007-button-text h007-carousel__nav h007-carousel__nav--prev"
+        aria-label="Previous products"
+        onClick={goPrev}
+      >
+        &larr;
       </button>
-      <button type="button" className="h007-nav-text h007-carousel__nav h007-carousel__nav--next" onClick={goNext}>
-        NEXT
+      <button
+        type="button"
+        className="h007-button-text h007-carousel__nav h007-carousel__nav--next"
+        aria-label="Next products"
+        onClick={goNext}
+      >
+        &rarr;
       </button>
     </div>
   );

@@ -24,6 +24,8 @@
 .h007-carousel__nav {
   position: absolute;
   top: 40%;
+  font-size: 22px;
+  letter-spacing: 0;
   color: var(--h007-cream-dim);
   padding: 8px 4px;
 }
