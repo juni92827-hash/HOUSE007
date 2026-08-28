@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from '../../../image/logo/1.png';
 import { useAuthStore } from '../../stores/authStore';
 import { useUiStore } from '../../stores/uiStore';
@@ -12,10 +12,10 @@ function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [isShopOpen, setShopOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const user = useAuthStore((s) => s.user);
   const profile = useAuthStore((s) => s.profile);
-  const openLogin = useUiStore((s) => s.openLogin);
   const openSearch = useUiStore((s) => s.openSearch);
   const openMiniBag = useCartStore((s) => s.openMiniBag);
   const bagCount = useCartStore((s) => s.count());
@@ -27,7 +27,7 @@ function Header() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const bagLabel = bagCount > 0 ? `BAG ${String(bagCount).padStart(2, '0')}` : 'BAG';
+  const bagLabel = bagCount > 0 ? `장바구니 ${String(bagCount).padStart(2, '0')}` : '장바구니';
 
   return (
     <header className={`h007-header ${scrolled ? 'h007-header--scrolled' : ''}`}>
@@ -63,18 +63,22 @@ function Header() {
           {user ? (
             <button
               type="button"
-              className="h007-nav-text h007-header__link"
+              className={`h007-nav-text h007-header__link ${profile?.last_name ? '' : 'h007-font-kr'}`}
               onClick={() => navigate('/my-house')}
             >
-              {profile?.last_name ? `MR. ${profile.last_name.toUpperCase()}` : 'MY HOUSE'}
+              {profile?.last_name ? `MR. ${profile.last_name.toUpperCase()}` : '마이페이지'}
             </button>
           ) : (
-            <button type="button" className="h007-nav-text h007-header__link" onClick={openLogin}>
-              LOGIN
+            <button
+              type="button"
+              className="h007-nav-text h007-header__link h007-font-kr"
+              onClick={() => navigate('/login', { state: { from: location.pathname } })}
+            >
+              로그인
             </button>
           )}
 
-          <button type="button" className="h007-nav-text h007-header__link" onClick={openMiniBag}>
+          <button type="button" className="h007-nav-text h007-header__link h007-font-kr" onClick={openMiniBag}>
             {bagLabel}
           </button>
         </nav>

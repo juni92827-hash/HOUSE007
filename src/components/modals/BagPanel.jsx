@@ -23,13 +23,13 @@ function BagPanel() {
 
   return (
     <ModalOverlay onClose={closeMiniBag} align="right">
-      <button type="button" className="h007-modal-close" onClick={closeMiniBag}>
-        CLOSE
+      <button type="button" className="h007-modal-close h007-font-kr" onClick={closeMiniBag}>
+        닫기
       </button>
-      <h2 className="h007-modal-title">YOUR BAG</h2>
+      <h2 className="h007-modal-title h007-font-kr">장바구니</h2>
 
       {items.length === 0 ? (
-        <p className="h007-modal-subtitle">Your bag is empty.</p>
+        <p className="h007-modal-subtitle h007-font-kr">장바구니가 비어 있습니다.</p>
       ) : (
         <>
           <div className="h007-bag__items">
@@ -37,7 +37,7 @@ function BagPanel() {
               <div className="h007-bag__item" key={`${item.productId}-${item.size}`}>
                 <div className="h007-bag__item-info">
                   <span className="h007-bag__item-name">{item.name}</span>
-                  <span className="h007-bag__item-meta">SIZE {item.size}</span>
+                  <span className="h007-bag__item-meta h007-font-kr">사이즈 {item.size}</span>
                   <span className="h007-bag__item-price">{formatPrice(item.price)}</span>
                 </div>
                 <div className="h007-bag__item-controls">
@@ -52,10 +52,10 @@ function BagPanel() {
                   </div>
                   <button
                     type="button"
-                    className="h007-text-link-button"
+                    className="h007-text-link-button h007-font-kr"
                     onClick={() => removeItem(item.productId, item.size)}
                   >
-                    REMOVE
+                    삭제
                   </button>
                 </div>
               </div>
@@ -63,12 +63,12 @@ function BagPanel() {
           </div>
 
           <div className="h007-bag__summary">
-            <div className="h007-bag__summary-row">
-              <span>SUBTOTAL</span>
+            <div className="h007-bag__summary-row h007-font-kr">
+              <span>소계</span>
               <span>{formatPrice(subtotal)}</span>
             </div>
-            <button type="button" className="h007-primary-button" onClick={goToCheckout}>
-              CHECKOUT
+            <button type="button" className="h007-primary-button h007-font-kr" onClick={goToCheckout}>
+              주문하기
             </button>
           </div>
         </>

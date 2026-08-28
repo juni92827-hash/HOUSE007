@@ -1,5 +1,22 @@
 export const ORDER_STATUS_FLOW = ['Preparing', 'Shipped', 'In Transit', 'Delivered'];
 
+const ORDER_STATUS_LABELS_KR = {
+  Preparing: '준비 중',
+  Shipped: '배송 시작',
+  'In Transit': '배송 중',
+  Delivered: '배송 완료',
+};
+
+/**
+ * getOrderStatusLabel — Korean display label for a value from ORDER_STATUS_FLOW.
+ * The English values stay unchanged so status comparisons keep working.
+ *
+ * @param {string} status - one of ORDER_STATUS_FLOW [Required]
+ */
+export function getOrderStatusLabel(status) {
+  return ORDER_STATUS_LABELS_KR[status] ?? status;
+}
+
 /**
  * computeOrderStatus
  *

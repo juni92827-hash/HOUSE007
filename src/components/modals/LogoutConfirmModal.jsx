@@ -21,11 +21,11 @@ function LogoutConfirmModal() {
         LEAVE THE HOUSE?
       </h2>
       <div style={{ display: 'flex', gap: 16, marginTop: 32 }}>
-        <button type="button" className="h007-primary-button" onClick={closeLogoutConfirm}>
-          STAY
+        <button type="button" className="h007-primary-button h007-font-kr" onClick={closeLogoutConfirm}>
+          취소
         </button>
-        <button type="button" className="h007-primary-button" onClick={handleLogout}>
-          LOG OUT
+        <button type="button" className="h007-primary-button h007-font-kr" onClick={handleLogout}>
+          로그아웃
         </button>
       </div>
     </ModalOverlay>

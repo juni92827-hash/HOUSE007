@@ -4,7 +4,6 @@ import ModalOverlay from '../common/ModalOverlay.jsx';
 import { useClientFileStore } from '../../stores/clientFileStore';
 import { useProductsStore } from '../../stores/productsStore';
 import { useAuthStore } from '../../stores/authStore';
-import { useUiStore } from '../../stores/uiStore';
 import { useCartStore } from '../../stores/cartStore';
 import { CLIENT_FILE_STEPS } from '../../data/clientFileSteps';
 import { getRecommendation, getMissionProfileLabel } from '../../data/recommendation';
@@ -32,7 +31,6 @@ function ClientFileModal() {
 
   const products = useProductsStore((s) => s.products);
   const user = useAuthStore((s) => s.user);
-  const openLogin = useUiStore((s) => s.openLogin);
   const addItem = useCartStore((s) => s.addItem);
   const navigate = useNavigate();
 
@@ -79,7 +77,7 @@ function ClientFileModal() {
   if (isComplete && recommendedProduct) {
     const handleSave = async () => {
       if (!user) {
-        openLogin();
+        navigate('/login', { state: { from: '/home' } });
         return;
       }
       setSaveStatus('saving');

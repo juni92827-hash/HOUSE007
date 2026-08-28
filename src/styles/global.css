@@ -103,3 +103,7 @@ img {
   font-size: 18px;
   color: var(--h007-cream-dim);
 }
+
+.h007-font-kr {
+  font-family: var(--h007-font-kr);
+}

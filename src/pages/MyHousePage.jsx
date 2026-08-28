@@ -8,14 +8,19 @@ import { useProductsStore } from '../stores/productsStore';
 import { useClientFileStore } from '../stores/clientFileStore';
 import { useUiStore } from '../stores/uiStore';
 import { supabase } from '../lib/supabase';
-import { computeOrderStatus, ORDER_STATUS_FLOW } from '../utils/orderStatus';
+import { computeOrderStatus, getOrderStatusLabel, ORDER_STATUS_FLOW } from '../utils/orderStatus';
 import { formatPrice } from '../utils/format';
 import '../components/common/forms.css';
 import '../components/modals/client-file-modal.css';
 import './checkout-page.css';
 import './my-house-page.css';
 
-const TABS = ['MY ORDERS', 'WISHLIST', 'ADDRESS BOOK', 'CLIENT FILE'];
+const TABS = [
+  { key: 'MY ORDERS', label: '주문 내역' },
+  { key: 'WISHLIST', label: '위시리스트' },
+  { key: 'ADDRESS BOOK', label: '주소록' },
+  { key: 'CLIENT FILE', label: '클라이언트 파일' },
+];
 const emptyAddress = { addressName: '', postalCode: '', address: '', detailAddress: '', deliveryRequest: '' };
 
 function MyHousePage() {
@@ -58,8 +63,8 @@ function MyHousePage() {
   if (!user) {
     return (
       <main className="h007-my-house h007-my-house--empty">
-        <p className="h007-modal-title">MY HOUSE IS FOR CLIENTS</p>
-        <p className="h007-modal-subtitle">Login to view your orders, wishlist, and Client File.</p>
+        <p className="h007-modal-title h007-font-kr">마이페이지는 House 클라이언트를 위한 공간입니다</p>
+        <p className="h007-modal-subtitle h007-font-kr">주문 내역, 위시리스트, 클라이언트 파일을 보려면 로그인해 주세요.</p>
       </main>
     );
   }
@@ -93,18 +98,18 @@ function MyHousePage() {
             {TABS.map((tab) => (
               <button
                 type="button"
-                key={tab}
-                className={`h007-nav-text h007-my-house__nav-item ${activeTab === tab ? 'h007-my-house__nav-item--active' : ''}`}
+                key={tab.key}
+                className={`h007-nav-text h007-my-house__nav-item h007-font-kr ${activeTab === tab.key ? 'h007-my-house__nav-item--active' : ''}`}
                 onClick={() => {
-                  setActiveTab(tab);
+                  setActiveTab(tab.key);
                   setTrackingOrderId(null);
                 }}
               >
-                {tab}
+                {tab.label}
               </button>
             ))}
-            <button type="button" className="h007-nav-text h007-my-house__nav-item" onClick={openLogoutConfirm}>
-              LOG OUT
+            <button type="button" className="h007-nav-text h007-my-house__nav-item h007-font-kr" onClick={openLogoutConfirm}>
+              로그아웃
             </button>
           </nav>
         </aside>
@@ -112,16 +117,16 @@ function MyHousePage() {
         <div className="h007-my-house__content">
           {activeTab === 'MY ORDERS' && (
             <section>
-              <h2 className="h007-section-title">MY ORDERS</h2>
-              {orders.length === 0 && <p className="h007-modal-subtitle">You have no orders yet.</p>}
+              <h2 className="h007-section-title h007-font-kr">주문 내역</h2>
+              {orders.length === 0 && <p className="h007-modal-subtitle h007-font-kr">아직 주문 내역이 없습니다.</p>}
 
               {trackedOrder ? (
                 <div className="h007-my-house__tracking">
-                  <button type="button" className="h007-text-link-button" onClick={() => setTrackingOrderId(null)}>
-                    ← BACK TO ORDERS
+                  <button type="button" className="h007-text-link-button h007-font-kr" onClick={() => setTrackingOrderId(null)}>
+                    ← 주문 목록으로
                   </button>
-                  <p className="h007-modal-subtitle" style={{ marginTop: 16 }}>
-                    ORDER {trackedOrder.order_number}
+                  <p className="h007-modal-subtitle h007-font-kr" style={{ marginTop: 16 }}>
+                    주문 {trackedOrder.order_number}
                   </p>
                   <div className="h007-my-house__status-flow">
                     {ORDER_STATUS_FLOW.map((status) => {
@@ -131,9 +136,9 @@ function MyHousePage() {
                       return (
                         <span
                           key={status}
-                          className={`h007-my-house__status-step ${reached ? 'h007-my-house__status-step--reached' : ''}`}
+                          className={`h007-my-house__status-step h007-font-kr ${reached ? 'h007-my-house__status-step--reached' : ''}`}
                         >
-                          {status}
+                          {getOrderStatusLabel(status)}
                         </span>
                       );
                     })}
@@ -143,27 +148,27 @@ function MyHousePage() {
                 <div className="h007-my-house__orders">
                   {orders.map((order) => (
                     <div key={order.id} className="h007-my-house__order">
-                      <div className="h007-my-house__order-header">
-                        <span>ORDER {order.order_number}</span>
+                      <div className="h007-my-house__order-header h007-font-kr">
+                        <span>주문 {order.order_number}</span>
                         <span>{new Date(order.created_at).toLocaleDateString()}</span>
-                        <span>{computeOrderStatus(order.created_at).toUpperCase()}</span>
+                        <span>{getOrderStatusLabel(computeOrderStatus(order.created_at))}</span>
                       </div>
                       {order.items.map((item) => (
-                        <div key={item.id} className="h007-checkout__item">
+                        <div key={item.id} className="h007-checkout__item h007-font-kr">
                           <span>
-                            {item.product_name} — SIZE {item.size} × {item.qty}
+                            {item.product_name} — 사이즈 {item.size} × {item.qty}
                           </span>
                           <span>{formatPrice(item.unit_price * item.qty)}</span>
                         </div>
                       ))}
-                      <div className="h007-my-house__order-footer">
-                        <span>TOTAL {formatPrice(order.total)}</span>
+                      <div className="h007-my-house__order-footer h007-font-kr">
+                        <span>합계 {formatPrice(order.total)}</span>
                         <button
                           type="button"
-                          className="h007-text-link-button"
+                          className="h007-text-link-button h007-font-kr"
                           onClick={() => setTrackingOrderId(order.id)}
                         >
-                          TRACK ORDER
+                          배송 조회
                         </button>
                       </div>
                     </div>
@@ -175,15 +180,15 @@ function MyHousePage() {
 
           {activeTab === 'WISHLIST' && (
             <section>
-              <h2 className="h007-section-title">WISHLIST</h2>
-              {wishlistProducts.length === 0 && <p className="h007-modal-subtitle">Your wishlist is empty.</p>}
+              <h2 className="h007-section-title h007-font-kr">위시리스트</h2>
+              {wishlistProducts.length === 0 && <p className="h007-modal-subtitle h007-font-kr">위시리스트가 비어 있습니다.</p>}
               <div className="h007-my-house__wishlist">
                 {wishlistProducts.map((product) => (
                   <div key={product.id} className="h007-my-house__wishlist-item">
                     <Link to={`/product/${product.id}`}>{product.name}</Link>
                     <span>{formatPrice(product.price)}</span>
-                    <button type="button" className="h007-text-link-button" onClick={() => toggleWishlist(product.id)}>
-                      REMOVE
+                    <button type="button" className="h007-text-link-button h007-font-kr" onClick={() => toggleWishlist(product.id)}>
+                      삭제
                     </button>
                   </div>
                 ))}
@@ -193,15 +198,15 @@ function MyHousePage() {
 
           {activeTab === 'ADDRESS BOOK' && (
             <section>
-              <h2 className="h007-section-title">ADDRESS BOOK</h2>
+              <h2 className="h007-section-title h007-font-kr">주소록</h2>
               <div className="h007-my-house__addresses">
                 {addresses.map((address) => (
                   <div key={address.id} className="h007-my-house__address">
                     <span>
                       {address.address_name} — {address.address} {address.detail_address}
                     </span>
-                    <button type="button" className="h007-text-link-button" onClick={() => removeAddress(address.id)}>
-                      REMOVE
+                    <button type="button" className="h007-text-link-button h007-font-kr" onClick={() => removeAddress(address.id)}>
+                      삭제
                     </button>
                   </div>
                 ))}
@@ -210,28 +215,28 @@ function MyHousePage() {
               {isAddingAddress ? (
                 <div className="h007-checkout__new-address" style={{ marginTop: 24 }}>
                   <label className="h007-field">
-                    <span className="h007-field__label">ADDRESS NAME</span>
+                    <span className="h007-field__label h007-font-kr">주소 이름</span>
                     <input className="h007-field__input" value={newAddress.addressName} onChange={(e) => setNewAddress((a) => ({ ...a, addressName: e.target.value }))} />
                   </label>
                   <label className="h007-field">
-                    <span className="h007-field__label">POSTAL CODE</span>
+                    <span className="h007-field__label h007-font-kr">우편번호</span>
                     <input className="h007-field__input" value={newAddress.postalCode} onChange={(e) => setNewAddress((a) => ({ ...a, postalCode: e.target.value }))} />
                   </label>
                   <label className="h007-field">
-                    <span className="h007-field__label">ADDRESS</span>
+                    <span className="h007-field__label h007-font-kr">주소</span>
                     <input className="h007-field__input" value={newAddress.address} onChange={(e) => setNewAddress((a) => ({ ...a, address: e.target.value }))} />
                   </label>
                   <label className="h007-field">
-                    <span className="h007-field__label">DETAIL ADDRESS</span>
+                    <span className="h007-field__label h007-font-kr">상세주소</span>
                     <input className="h007-field__input" value={newAddress.detailAddress} onChange={(e) => setNewAddress((a) => ({ ...a, detailAddress: e.target.value }))} />
                   </label>
-                  <button type="button" className="h007-primary-button" onClick={handleSaveAddress}>
-                    SAVE ADDRESS
+                  <button type="button" className="h007-primary-button h007-font-kr" onClick={handleSaveAddress}>
+                    주소 저장
                   </button>
                 </div>
               ) : (
-                <button type="button" className="h007-text-link-button" style={{ marginTop: 16 }} onClick={() => setIsAddingAddress(true)}>
-                  ADD NEW ADDRESS
+                <button type="button" className="h007-text-link-button h007-font-kr" style={{ marginTop: 16 }} onClick={() => setIsAddingAddress(true)}>
+                  새 주소 추가
                 </button>
               )}
             </section>
@@ -239,13 +244,13 @@ function MyHousePage() {
 
           {activeTab === 'CLIENT FILE' && (
             <section>
-              <h2 className="h007-section-title">CLIENT FILE</h2>
-              {clientProfile === undefined && <p className="h007-modal-subtitle">Loading...</p>}
+              <h2 className="h007-section-title h007-font-kr">클라이언트 파일</h2>
+              {clientProfile === undefined && <p className="h007-modal-subtitle h007-font-kr">불러오는 중...</p>}
               {clientProfile === null && (
                 <>
-                  <p className="h007-modal-subtitle">You have not saved a Client File yet.</p>
-                  <button type="button" className="h007-primary-button" style={{ width: 240 }} onClick={openClientFile}>
-                    START YOUR PROFILE
+                  <p className="h007-modal-subtitle h007-font-kr">아직 저장된 클라이언트 파일이 없습니다.</p>
+                  <button type="button" className="h007-primary-button h007-font-kr" style={{ width: 240 }} onClick={openClientFile}>
+                    프로필 시작하기
                   </button>
                 </>
               )}
@@ -261,8 +266,8 @@ function MyHousePage() {
                 </div>
               )}
               {clientProfile?.recommended_product_id && (
-                <Link to={`/product/${clientProfile.recommended_product_id}`} className="h007-text-link-button" style={{ marginTop: 16, display: 'inline-block' }}>
-                  VIEW RECOMMENDED SUIT
+                <Link to={`/product/${clientProfile.recommended_product_id}`} className="h007-text-link-button h007-font-kr" style={{ marginTop: 16, display: 'inline-block' }}>
+                  추천 슈트 보기
                 </Link>
               )}
             </section>

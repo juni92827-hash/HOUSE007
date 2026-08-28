@@ -1,5 +1,5 @@
 .h007-product-detail {
-  padding: 56px 0 140px;
+  padding: 120px 0 0;
 }
 
 .h007-product-detail--empty {
@@ -11,19 +11,7 @@
   gap: 16px;
 }
 
-.h007-product-detail__layout {
-  padding: 0 40px;
-  display: grid;
-  grid-template-columns: 1fr 460px;
-  gap: 64px;
-}
-
-.h007-product-detail__main-image {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-}
-
-.h007-product-detail__main-image .h007-placeholder {
+.h007-pd-section {
   animation: h007-crossfade 300ms ease;
 }
 
@@ -36,20 +24,21 @@
   }
 }
 
-.h007-product-detail__thumbnails {
-  margin-top: 16px;
-  display: flex;
-  gap: 12px;
+/* HERO — full-bleed image, no side padding */
+.h007-pd-hero {
+  margin-bottom: 96px;
 }
 
-.h007-product-detail__thumbnail {
-  width: 96px;
-  aspect-ratio: 4 / 5;
-  opacity: 0.55;
+.h007-pd-hero__image {
+  width: 100%;
+  height: min(88vh, 980px);
 }
 
-.h007-product-detail__thumbnail--active {
-  opacity: 1;
+/* PRODUCT INFO — text only, narrow measure for readability */
+.h007-pd-info {
+  max-width: 720px;
+  padding: 0 40px;
+  margin: 0 auto 140px;
 }
 
 .h007-product-detail__name {
@@ -60,48 +49,96 @@
 }
 
 .h007-product-detail__style {
-  margin-top: 8px;
+  margin-top: 12px;
   font-family: var(--h007-font-body);
   font-size: 15px;
   color: var(--h007-cream-dim);
 }
 
 .h007-product-detail__price {
-  margin-top: 16px;
+  margin-top: 20px;
   font-family: var(--h007-font-body);
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
   color: var(--h007-cream);
 }
 
 .h007-product-detail__description {
-  margin-top: 24px;
+  margin-top: 28px;
   font-family: var(--h007-font-body);
   font-size: 15px;
-  line-height: 1.7;
+  line-height: 1.8;
   color: var(--h007-cream-dim);
 }
 
-.h007-product-detail__specs {
-  margin: 32px 0;
+/* MATERIAL — large fabric image + short info */
+.h007-pd-material {
+  padding: 0 40px;
+  margin-bottom: 140px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 64px;
+  align-items: center;
 }
 
-.h007-product-detail__specs dt {
-  font-family: var(--h007-font-body);
-  font-size: 11px;
+.h007-pd-material__image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+}
+
+.h007-pd-material__name {
+  margin-top: 10px;
+  font-family: var(--h007-font-display);
+  font-size: 32px;
   font-weight: 500;
-  letter-spacing: 0.12em;
-  color: var(--h007-cream-faint);
+  color: var(--h007-cream);
 }
 
-.h007-product-detail__specs dd {
-  margin: 4px 0 0;
+.h007-pd-material__meta {
+  margin-top: 12px;
   font-family: var(--h007-font-body);
   font-size: 15px;
+  color: var(--h007-cream-dim);
+}
+
+/* DETAIL — fit info + large detail image */
+.h007-pd-detail {
+  padding: 0 40px;
+  margin-bottom: 160px;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.h007-pd-detail__value {
+  margin-top: 10px;
+  font-family: var(--h007-font-display);
+  font-size: 32px;
+  font-weight: 500;
   color: var(--h007-cream);
+}
+
+.h007-pd-detail__image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+}
+
+/* STYLING — pure editorial image, full-bleed */
+.h007-pd-styling {
+  margin-bottom: 160px;
+}
+
+.h007-pd-styling__image {
+  width: 100%;
+  height: min(80vh, 900px);
+}
+
+/* PURCHASE */
+.h007-pd-purchase {
+  max-width: 640px;
+  padding: 0 40px;
+  margin: 0 auto 160px;
 }
 
 .h007-product-detail__sizes {
@@ -136,10 +173,9 @@
 
 .h007-product-detail__stock-label {
   margin-top: 10px;
-  font-family: var(--h007-font-body);
   font-size: 11px;
   font-weight: 500;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.04em;
   color: var(--h007-cream-dim);
 }
 
@@ -157,9 +193,9 @@
   gap: 12px;
 }
 
+/* RELATED PRODUCTS */
 .h007-product-detail__related {
-  margin-top: 120px;
-  padding: 0 40px;
+  padding: 0 40px 160px;
 }
 
 .h007-product-detail__related-list {

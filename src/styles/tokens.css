@@ -9,9 +9,10 @@
   --h007-error: #c96a4e;
   --h007-success: #8a9a7c;
 
-  /* typography — exactly two typefaces per the HOUSE 007 spec, no others */
+  /* typography — Cormorant Garamond / Manrope for brand & English UI, Pretendard for Korean commerce UI */
   --h007-font-display: 'Cormorant Garamond', serif;
   --h007-font-body: 'Manrope', sans-serif;
+  --h007-font-kr: 'Pretendard', sans-serif;
 
   /* layout */
   --h007-content-max: 1760px;

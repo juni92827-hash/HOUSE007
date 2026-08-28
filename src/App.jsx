@@ -4,8 +4,6 @@ import { useAuthStore } from './stores/authStore';
 import { useProductsStore } from './stores/productsStore';
 import { useWishlistStore } from './stores/wishlistStore';
 import Header from './components/layout/Header.jsx';
-import LoginModal from './components/modals/LoginModal.jsx';
-import SignupModal from './components/modals/SignupModal.jsx';
 import LogoutConfirmModal from './components/modals/LogoutConfirmModal.jsx';
 import SearchOverlay from './components/modals/SearchOverlay.jsx';
 import BagPanel from './components/modals/BagPanel.jsx';
@@ -16,6 +14,8 @@ import AuthMessageToast from './components/layout/AuthMessageToast.jsx';
 import LandingPage from './pages/LandingPage.jsx';
 import HomePage from './pages/HomePage.jsx';
 import ProductDetailPage from './pages/ProductDetailPage.jsx';
+import LoginPage from './pages/LoginPage.jsx';
+import SignupPage from './pages/SignupPage.jsx';
 import CheckoutPage from './pages/CheckoutPage.jsx';
 import MyHousePage from './pages/MyHousePage.jsx';
 import NotFoundPage from './pages/NotFoundPage.jsx';
@@ -37,23 +37,24 @@ function App() {
   }, [user, syncWishlist]);
 
   const isLanding = location.pathname === '/';
+  const isAuthPage = location.pathname === '/login' || location.pathname === '/signup';
 
   return (
     <>
       <GlobalAudio />
       <AudioControls />
       <AuthMessageToast />
-      {!isLanding && <Header />}
+      {!isLanding && !isAuthPage && <Header />}
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/home" element={<HomePage />} />
         <Route path="/product/:id" element={<ProductDetailPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
         <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="/my-house" element={<MyHousePage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
-      <LoginModal />
-      <SignupModal />
       <LogoutConfirmModal />
       <SearchOverlay />
       <BagPanel />
